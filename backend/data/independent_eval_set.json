@@ -1,0 +1,127 @@
+{
+  "description": "Independent out-of-distribution evaluation benchmark for genomic pipeline failure prediction",
+  "version": "1.0.0",
+  "evaluation_context": "Independent templates and manual workflows isolated from dataset generator lineages",
+  "samples": [
+    {
+      "id": "indep_valid_paired_end_qc",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Paired-end dual FASTQC QC pipeline",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in sample_R1.fastq --out qc_R1.html\nFASTQC --in sample_R2.fastq --out qc_R2.html\nTRIMMOMATIC --in sample_R1.fastq --out sample_R1_val.fq --minlen 40\nBWA MEM --ref reference_genome.fa --in sample_R1_val.fq --out sample_pe.sam --threads 16\nSAMTOOLS VIEW --in sample_pe.sam --out sample_pe.bam --threads 8\nSAMTOOLS SORT --in sample_pe.bam --out sample_pe_sorted.bam --threads 8\nSAMTOOLS INDEX --in sample_pe_sorted.bam\nGATK HaplotypeCaller --ref reference_genome.fa --in sample_pe_sorted.bam --out pe_variants.vcf"
+    },
+    {
+      "id": "indep_valid_qc_only_single_cell",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Single-cell pre-alignment QC and trim",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in sc_reads.fq --out sc_qc.html\nTRIMMOMATIC --in sc_reads.fq --out sc_trimmed.fq --minlen 30 --slidingwindow 4:15"
+    },
+    {
+      "id": "indep_valid_minimal_align_sort_index",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Short-read targeted alignment minimal pipeline",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "BWA MEM --ref grch38.fa --in targeted_panel.fastq --out targeted.sam --threads 4\nSAMTOOLS SORT --in targeted.sam --out targeted.bam --threads 4\nSAMTOOLS INDEX --in targeted.bam"
+    },
+    {
+      "id": "indep_valid_exome_variant_calling",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Whole exome variant calling with custom filenames",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in wes_sample_01.fastq --out wes_01_fastqc.html\nBWA MEM --ref hs37d5.fa --in wes_sample_01.fastq --out wes_01.sam --threads 12\nSAMTOOLS VIEW --in wes_01.sam --out wes_01_raw.bam --threads 6\nSAMTOOLS SORT --in wes_01_raw.bam --out wes_01_coordsort.bam --threads 6\nSAMTOOLS INDEX --in wes_01_coordsort.bam\nGATK HaplotypeCaller --ref hs37d5.fa --in wes_01_coordsort.bam --out wes_01_germline.vcf"
+    },
+    {
+      "id": "indep_valid_resequencing_pipeline",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Bacterial resequencing workflow",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in ecoli_reads.fastq --out ecoli_qc.html\nTRIMMOMATIC --in ecoli_reads.fastq --out ecoli_clean.fq --minlen 50 --slidingwindow 5:25\nBWA MEM --ref ecoli_k12.fa --in ecoli_clean.fq --out ecoli.sam --threads 4\nSAMTOOLS SORT --in ecoli.sam --out ecoli_sorted.bam\nSAMTOOLS INDEX --in ecoli_sorted.bam\nGATK HaplotypeCaller --ref ecoli_k12.fa --in ecoli_sorted.bam --out ecoli_snps.vcf"
+    },
+    {
+      "id": "indep_valid_qc_and_bwa_only",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "Two-step alignment check",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in lib1.fq --out lib1_qc.html\nBWA MEM --ref chr21.fa --in lib1.fq --out lib1.sam"
+    },
+    {
+      "id": "indep_valid_high_thread_wgs",
+      "category": "INDEPENDENT_VALID",
+      "architecture": "HPC clustered WGS pipeline with high concurrency",
+      "expected_valid": true,
+      "expected_failed_label": 0,
+      "pipeline_text": "FASTQC --in hpc_run.fastq --out hpc_run_qc.html\nTRIMMOMATIC --in hpc_run.fastq --out hpc_trimmed.fq --minlen 36\nBWA MEM --ref hg19.fa --in hpc_trimmed.fq --out hpc.sam --threads 32\nSAMTOOLS SORT --in hpc.sam --out hpc.sorted.bam --threads 16\nSAMTOOLS INDEX --in hpc.sorted.bam\nGATK HaplotypeCaller --ref hg19.fa --in hpc.sorted.bam --out hpc_calls.vcf"
+    },
+    {
+      "id": "indep_invalid_unknown_aligner_star",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "RNA-Seq aligner STAR (unsupported tool)",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "FASTQC --in rnaseq.fastq --out rnaseq_qc.html\nSTAR --genomeDir /ref --in rnaseq.fastq --out rnaseq.bam\nSAMTOOLS SORT --in rnaseq.bam --out rnaseq_sorted.bam\nSAMTOOLS INDEX --in rnaseq_sorted.bam"
+    },
+    {
+      "id": "indep_invalid_missing_ref_in_bwa_gatk",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Both BWA and GATK missing mandatory reference genome",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "BWA MEM --in sample.fq --out sample.sam\nSAMTOOLS SORT --in sample.sam --out sample.bam\nSAMTOOLS INDEX --in sample.bam\nGATK HaplotypeCaller --in sample.bam --out calls.vcf"
+    },
+    {
+      "id": "indep_invalid_unindexed_bam_variant_caller",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Calling variants directly from sorted BAM without indexing",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "FASTQC --in exome.fq --out exome_qc.html\nBWA MEM --ref hg38.fa --in exome.fq --out exome.sam\nSAMTOOLS SORT --in exome.sam --out exome_sorted.bam\nGATK HaplotypeCaller --ref hg38.fa --in exome_sorted.bam --out variants.vcf"
+    },
+    {
+      "id": "indep_invalid_cyclic_overwrite_dependency",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "In-place file overwrite leading to missing intermediate",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "SAMTOOLS VIEW --in sample.sam --out sample.bam\nSAMTOOLS SORT --in sample.bam --out sample.bam\nSAMTOOLS INDEX --in sample.bam"
+    },
+    {
+      "id": "indep_invalid_inverted_qc_after_gatk",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Severe pipeline stage inversion (FASTQC after GATK)",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "GATK HaplotypeCaller --ref ref.fa --in cohort.bam --out raw_snps.vcf\nFASTQC --in cohort.bam --out cohort_qc.html"
+    },
+    {
+      "id": "indep_invalid_unresolved_inputs",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Cascading unproduced file dependencies",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "SAMTOOLS VIEW --in non_existent_1.sam --out stage1.bam\nSAMTOOLS SORT --in non_existent_2.bam --out stage2.bam\nSAMTOOLS INDEX --in non_existent_3.bam"
+    },
+    {
+      "id": "indep_invalid_syntax_corrupted_flags",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Malformed CLI parameter formatting and missing values",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "TRIMMOMATIC --in reads.fq --out clean.fq --minlen\nBWA MEM --ref genome.fa --in clean.fq --threads -4\nSAMTOOLS INDEX"
+    },
+    {
+      "id": "indep_invalid_multi_unknown_tools",
+      "category": "INDEPENDENT_INVALID",
+      "architecture": "Multiple unsupported third-party tools (HISAT2 and FREEBAYES)",
+      "expected_valid": false,
+      "expected_failed_label": 1,
+      "pipeline_text": "HISAT2 -x genome_idx -U sample.fq -S sample.sam\nFREEBAYES -f genome.fa sample.bam > calls.vcf"
+    }
+  ]
+}

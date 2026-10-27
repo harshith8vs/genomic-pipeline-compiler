@@ -1,0 +1,1170 @@
+syntax_error_count,missing_parameter_count,sequence_violation_count,unresolved_reference_count,file_extension_error_count,total_error_count,warning_count,pipeline_length,has_qc_step,has_alignment_step,has_variant_calling_step,tool_diversity_ratio,unindexed_bam_count,group_id,pipeline_text,failed,label,label_desc
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v1.fastq --out qc_g1_v1.html
+TRIMMOMATIC --in reads_g1_v1.fastq --out clean_g1_v1.fq --minlen 30 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v2.fastq --out qc_g1_v2.html
+TRIMMOMATIC --in reads_g1_v2.fastq --out clean_g1_v2.fq --minlen 36 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v3.fastq --out qc_g1_v3.html
+TRIMMOMATIC --in reads_g1_v3.fastq --out clean_g1_v3.fq --minlen 36 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v4.fastq --out qc_g1_v4.html
+TRIMMOMATIC --in reads_g1_v4.fastq --out clean_g1_v4.fq --minlen 30 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v5.fastq --out qc_g1_v5.html
+TRIMMOMATIC --in reads_g1_v5.fastq --out clean_g1_v5.fq --minlen 30 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v6.fastq --out qc_g1_v6.html
+TRIMMOMATIC --in reads_g1_v6.fastq --out clean_g1_v6.fq --minlen 30 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v7.fastq --out qc_g1_v7.html
+TRIMMOMATIC --in reads_g1_v7.fastq --out clean_g1_v7.fq --minlen 36 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v8.fastq --out qc_g1_v8.html
+TRIMMOMATIC --in reads_g1_v8.fastq --out clean_g1_v8.fq --minlen 36 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v9.fastq --out qc_g1_v9.html
+TRIMMOMATIC --in reads_g1_v9.fastq --out clean_g1_v9.fq --minlen 36 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,0,0,0,0,0,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_v10.fastq --out qc_g1_v10.html
+TRIMMOMATIC --in reads_g1_v10.fastq --out clean_g1_v10.fq --minlen 40 --slidingwindow 4:20",0,STATIC_VALID,Valid baseline (Short Preprocessing: FASTQC -> TRIMMOMATIC)
+0,1,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --out qc_g1_f1.html
+TRIMMOMATIC --in reads_g1_f1.fastq --out clean_g1_f1.fq --minlen 36 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_01_PREPROC_SHORT
+0,0,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f2.fastq --out qc_g1_f2.html
+TRIMMOMATIC --in reads_g1_f2.fastq --out clean_g1_f2.fq --minlen 40 --slidingwindow invalid_window",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_01_PREPROC_SHORT
+0,0,0,1,1,2,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f3.fastq --out qc_g1_f3.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g1_f3.fq --minlen 36 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_01_PREPROC_SHORT
+1,0,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f4.fastq --out qc_g1_f4.html --threads
+TRIMMOMATIC --in reads_g1_f4.fastq --out clean_g1_f4.fq --minlen 40 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_01_PREPROC_SHORT
+1,0,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f5.fastq --out qc_g1_f5.html
+TRIMMOMATIC --in reads_g1_f5.fastq --out clean_g1_f5.fq --minlen 40 --slidingwindow 4:20 --threads",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_01_PREPROC_SHORT
+0,1,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f6.fastq --out qc_g1_f6.html
+TRIMMOMATIC --out clean_g1_f6.fq --minlen 36 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_01_PREPROC_SHORT
+0,0,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f7.fastq --out qc_g1_f7.html
+TRIMMOMATIC --in reads_g1_f7.fastq --out clean_g1_f7.fq --minlen 30 --slidingwindow invalid_window",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_01_PREPROC_SHORT
+0,1,0,0,0,1,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --out qc_g1_f8.html
+TRIMMOMATIC --in reads_g1_f8.fastq --out clean_g1_f8.fq --minlen 40 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_01_PREPROC_SHORT
+0,0,0,1,1,2,0,2,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f9.fastq --out qc_g1_f9.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g1_f9.fq --minlen 40 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_01_PREPROC_SHORT
+1,0,0,0,0,1,0,1,1,0,0,1.0,0,GRP_01_PREPROC_SHORT,"FASTQC --in reads_g1_f10.fastq --out qc_g1_f10.html
+UNKNOWN_TOOL --in reads_g1_f10.fastq --out clean_g1_f10.fq --minlen 30 --slidingwindow 4:20",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_01_PREPROC_SHORT
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v1.fq --out qc_g2_v1.html
+TRIMMOMATIC --in raw_g2_v1.fq --out trim_g2_v1.fq --minlen 40 --slidingwindow 4:15
+FASTQC --in trim_g2_v1.fq --out clean_qc_g2_v1.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v2.fq --out qc_g2_v2.html
+TRIMMOMATIC --in raw_g2_v2.fq --out trim_g2_v2.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_v2.fq --out clean_qc_g2_v2.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v3.fq --out qc_g2_v3.html
+TRIMMOMATIC --in raw_g2_v3.fq --out trim_g2_v3.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_v3.fq --out clean_qc_g2_v3.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v4.fq --out qc_g2_v4.html
+TRIMMOMATIC --in raw_g2_v4.fq --out trim_g2_v4.fq --minlen 50 --slidingwindow 4:15
+FASTQC --in trim_g2_v4.fq --out clean_qc_g2_v4.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v5.fq --out qc_g2_v5.html
+TRIMMOMATIC --in raw_g2_v5.fq --out trim_g2_v5.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_v5.fq --out clean_qc_g2_v5.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v6.fq --out qc_g2_v6.html
+TRIMMOMATIC --in raw_g2_v6.fq --out trim_g2_v6.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_v6.fq --out clean_qc_g2_v6.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v7.fq --out qc_g2_v7.html
+TRIMMOMATIC --in raw_g2_v7.fq --out trim_g2_v7.fq --minlen 40 --slidingwindow 4:15
+FASTQC --in trim_g2_v7.fq --out clean_qc_g2_v7.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v8.fq --out qc_g2_v8.html
+TRIMMOMATIC --in raw_g2_v8.fq --out trim_g2_v8.fq --minlen 50 --slidingwindow 4:15
+FASTQC --in trim_g2_v8.fq --out clean_qc_g2_v8.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v9.fq --out qc_g2_v9.html
+TRIMMOMATIC --in raw_g2_v9.fq --out trim_g2_v9.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_v9.fq --out clean_qc_g2_v9.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,0,0,0,0,0,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_v10.fq --out qc_g2_v10.html
+TRIMMOMATIC --in raw_g2_v10.fq --out trim_g2_v10.fq --minlen 50 --slidingwindow 4:15
+FASTQC --in trim_g2_v10.fq --out clean_qc_g2_v10.html",0,STATIC_VALID,Valid baseline (Dual Quality Control: FASTQC -> TRIMMOMATIC -> FASTQC)
+0,1,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f1.fq --out qc_g2_f1.html
+TRIMMOMATIC --in raw_g2_f1.fq --out trim_g2_f1.fq --minlen 40 --slidingwindow 4:15
+FASTQC --out clean_qc_g2_f1.html",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_02_QC_TRIM_QC
+0,0,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f2.fq --out qc_g2_f2.html
+TRIMMOMATIC --in raw_g2_f2.fq --out trim_g2_f2.fq --minlen 40 --slidingwindow invalid_window
+FASTQC --in trim_g2_f2.fq --out clean_qc_g2_f2.html",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_02_QC_TRIM_QC
+0,0,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f3.fq --out qc_g2_f3.html
+TRIMMOMATIC --in raw_g2_f3.fq --out trim_g2_f3.fq --minlen 40 --slidingwindow invalid_window
+FASTQC --in trim_g2_f3.fq --out clean_qc_g2_f3.html",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_02_QC_TRIM_QC
+1,0,0,0,0,1,0,2,1,0,0,1.0,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f4.fq --out qc_g2_f4.html
+TRIMMOMATIC --in raw_g2_f4.fq --out trim_g2_f4.fq --minlen 36 --slidingwindow 4:15
+FASTQC_PRO --in trim_g2_f4.fq --out clean_qc_g2_f4.html",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_02_QC_TRIM_QC
+0,0,0,1,1,2,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f5.fq --out qc_g2_f5.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out trim_g2_f5.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_f5.fq --out clean_qc_g2_f5.html",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_02_QC_TRIM_QC
+0,0,0,1,1,2,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f6.fq --out qc_g2_f6.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out trim_g2_f6.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_f6.fq --out clean_qc_g2_f6.html",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_02_QC_TRIM_QC
+0,1,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f7.fq --out qc_g2_f7.html
+TRIMMOMATIC --out trim_g2_f7.fq --minlen 30 --slidingwindow 4:15
+FASTQC --in trim_g2_f7.fq --out clean_qc_g2_f7.html",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_02_QC_TRIM_QC
+0,0,0,1,1,2,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f8.fq --out qc_g2_f8.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out trim_g2_f8.fq --minlen 40 --slidingwindow 4:15
+FASTQC --in trim_g2_f8.fq --out clean_qc_g2_f8.html",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_02_QC_TRIM_QC
+1,0,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --in raw_g2_f9.fq --out qc_g2_f9.html --threads
+TRIMMOMATIC --in raw_g2_f9.fq --out trim_g2_f9.fq --minlen 36 --slidingwindow 4:15
+FASTQC --in trim_g2_f9.fq --out clean_qc_g2_f9.html",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_02_QC_TRIM_QC
+0,1,0,0,0,1,0,3,1,0,0,0.6667,0,GRP_02_QC_TRIM_QC,"FASTQC --out qc_g2_f10.html
+TRIMMOMATIC --in raw_g2_f10.fq --out trim_g2_f10.fq --minlen 40 --slidingwindow 4:15
+FASTQC --in trim_g2_f10.fq --out clean_qc_g2_f10.html",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_02_QC_TRIM_QC
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v1.fq --out qc_g3_v1.html
+BWA MEM --ref reference.fa --in reads_g3_v1.fq --out align_g3_v1.sam --threads 16
+SAMTOOLS SORT --in align_g3_v1.sam --out sorted_g3_v1.bam --threads 16
+SAMTOOLS INDEX --in sorted_g3_v1.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v2.fq --out qc_g3_v2.html
+BWA MEM --ref reference.fa --in reads_g3_v2.fq --out align_g3_v2.sam --threads 8
+SAMTOOLS SORT --in align_g3_v2.sam --out sorted_g3_v2.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_v2.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v3.fq --out qc_g3_v3.html
+BWA MEM --ref reference.fa --in reads_g3_v3.fq --out align_g3_v3.sam --threads 4
+SAMTOOLS SORT --in align_g3_v3.sam --out sorted_g3_v3.bam --threads 4
+SAMTOOLS INDEX --in sorted_g3_v3.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v4.fq --out qc_g3_v4.html
+BWA MEM --ref reference.fa --in reads_g3_v4.fq --out align_g3_v4.sam --threads 8
+SAMTOOLS SORT --in align_g3_v4.sam --out sorted_g3_v4.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_v4.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v5.fq --out qc_g3_v5.html
+BWA MEM --ref reference.fa --in reads_g3_v5.fq --out align_g3_v5.sam --threads 8
+SAMTOOLS SORT --in align_g3_v5.sam --out sorted_g3_v5.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_v5.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v6.fq --out qc_g3_v6.html
+BWA MEM --ref reference.fa --in reads_g3_v6.fq --out align_g3_v6.sam --threads 16
+SAMTOOLS SORT --in align_g3_v6.sam --out sorted_g3_v6.bam --threads 16
+SAMTOOLS INDEX --in sorted_g3_v6.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v7.fq --out qc_g3_v7.html
+BWA MEM --ref reference.fa --in reads_g3_v7.fq --out align_g3_v7.sam --threads 4
+SAMTOOLS SORT --in align_g3_v7.sam --out sorted_g3_v7.bam --threads 4
+SAMTOOLS INDEX --in sorted_g3_v7.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v8.fq --out qc_g3_v8.html
+BWA MEM --ref reference.fa --in reads_g3_v8.fq --out align_g3_v8.sam --threads 2
+SAMTOOLS SORT --in align_g3_v8.sam --out sorted_g3_v8.bam --threads 2
+SAMTOOLS INDEX --in sorted_g3_v8.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v9.fq --out qc_g3_v9.html
+BWA MEM --ref reference.fa --in reads_g3_v9.fq --out align_g3_v9.sam --threads 2
+SAMTOOLS SORT --in align_g3_v9.sam --out sorted_g3_v9.bam --threads 2
+SAMTOOLS INDEX --in sorted_g3_v9.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_v10.fq --out qc_g3_v10.html
+BWA MEM --ref reference.fa --in reads_g3_v10.fq --out align_g3_v10.sam --threads 4
+SAMTOOLS SORT --in align_g3_v10.sam --out sorted_g3_v10.bam --threads 4
+SAMTOOLS INDEX --in sorted_g3_v10.bam",0,STATIC_VALID,Valid baseline (Basic Alignment & Indexing: FASTQC -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+1,0,0,1,0,2,0,3,1,0,0,0.6667,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f1.fq --out qc_g3_f1.html
+BOWTIE2 --ref reference.fa --in reads_g3_f1.fq --out align_g3_f1.sam --threads 2
+SAMTOOLS SORT --in align_g3_f1.sam --out sorted_g3_f1.bam --threads 2
+SAMTOOLS INDEX --in sorted_g3_f1.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_03_ALIGN_INDEX_MIN
+0,0,0,1,1,2,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f2.fq --out qc_g3_f2.html
+BWA MEM --ref reference.fa --in reads_g3_f2.fq --out align_g3_f2.pdf --threads 2
+SAMTOOLS SORT --in align_g3_f2.sam --out sorted_g3_f2.bam --threads 2
+SAMTOOLS INDEX --in sorted_g3_f2.bam",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_03_ALIGN_INDEX_MIN
+2,0,1,1,0,4,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f3.fq --out qc_g3_f3.html
+BWA MEM --ref reference.fa --in reads_g3_f3.fq --out align_g3_f3.sam --threads 2
+SAMTOOLS SORT --in align_g3_f3.sam --out sorted_g3_f3.bam --threads 2 --threads
+SAMTOOLS INDEX --in sorted_g3_f3.bam",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_03_ALIGN_INDEX_MIN
+2,0,0,1,0,3,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f4.fq --out qc_g3_f4.html
+BWA MEM --ref reference.fa --in reads_g3_f4.fq --out align_g3_f4.sam --threads 8 --threads
+SAMTOOLS SORT --in align_g3_f4.sam --out sorted_g3_f4.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_f4.bam",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_03_ALIGN_INDEX_MIN
+0,0,0,2,0,3,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f5.fq --out qc_g3_f5.html
+BWA MEM --ref reference.fa --in reads_g3_f5.fq --out align_g3_f5.sam --threads 8
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_f5.bam",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_03_ALIGN_INDEX_MIN
+1,0,0,1,0,2,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f6.fq --out qc_g3_f6.html
+BWA INVALID_SUBCOMMAND --ref reference.fa --in reads_g3_f6.fq --out align_g3_f6.sam --threads 4
+SAMTOOLS SORT --in align_g3_f6.sam --out sorted_g3_f6.bam --threads 4
+SAMTOOLS INDEX --in sorted_g3_f6.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_03_ALIGN_INDEX_MIN
+0,0,0,1,1,2,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f7.fq --out qc_g3_f7.html
+BWA MEM --ref reference.fa --in reads_g3_f7.fq --out align_g3_f7.pdf --threads 8
+SAMTOOLS SORT --in align_g3_f7.sam --out sorted_g3_f7.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_f7.bam",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_03_ALIGN_INDEX_MIN
+1,0,0,1,0,2,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f8.fq --out qc_g3_f8.html
+BWA INVALID_SUBCOMMAND --ref reference.fa --in reads_g3_f8.fq --out align_g3_f8.sam --threads 8
+SAMTOOLS SORT --in align_g3_f8.sam --out sorted_g3_f8.bam --threads 8
+SAMTOOLS INDEX --in sorted_g3_f8.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_03_ALIGN_INDEX_MIN
+0,0,0,1,1,2,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f9.fq --out qc_g3_f9.html
+BWA MEM --ref reference.fa --in reads_g3_f9.fq --out align_g3_f9.pdf --threads 4
+SAMTOOLS SORT --in align_g3_f9.sam --out sorted_g3_f9.bam --threads 4
+SAMTOOLS INDEX --in sorted_g3_f9.bam",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_03_ALIGN_INDEX_MIN
+2,0,0,1,0,3,0,4,1,1,0,0.75,0,GRP_03_ALIGN_INDEX_MIN,"FASTQC --in reads_g3_f10.fq --out qc_g3_f10.html
+BWA MEM --ref reference.fa --in reads_g3_f10.fq --out align_g3_f10.sam --threads 2 --threads
+SAMTOOLS SORT --in align_g3_f10.sam --out sorted_g3_f10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g3_f10.bam",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_03_ALIGN_INDEX_MIN
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v1.fq --out align_g4_v1.sam --threads 16
+SAMTOOLS SORT --in align_g4_v1.sam --out sorted_g4_v1.bam --threads 16
+SAMTOOLS INDEX --in sorted_g4_v1.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v2.fq --out align_g4_v2.sam --threads 16
+SAMTOOLS SORT --in align_g4_v2.sam --out sorted_g4_v2.bam --threads 16
+SAMTOOLS INDEX --in sorted_g4_v2.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v3.fq --out align_g4_v3.sam --threads 8
+SAMTOOLS SORT --in align_g4_v3.sam --out sorted_g4_v3.bam --threads 8
+SAMTOOLS INDEX --in sorted_g4_v3.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v4.fq --out align_g4_v4.sam --threads 4
+SAMTOOLS SORT --in align_g4_v4.sam --out sorted_g4_v4.bam --threads 4
+SAMTOOLS INDEX --in sorted_g4_v4.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v5.fq --out align_g4_v5.sam --threads 16
+SAMTOOLS SORT --in align_g4_v5.sam --out sorted_g4_v5.bam --threads 16
+SAMTOOLS INDEX --in sorted_g4_v5.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v6.fq --out align_g4_v6.sam --threads 2
+SAMTOOLS SORT --in align_g4_v6.sam --out sorted_g4_v6.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_v6.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v7.fq --out align_g4_v7.sam --threads 2
+SAMTOOLS SORT --in align_g4_v7.sam --out sorted_g4_v7.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_v7.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v8.fq --out align_g4_v8.sam --threads 4
+SAMTOOLS SORT --in align_g4_v8.sam --out sorted_g4_v8.bam --threads 4
+SAMTOOLS INDEX --in sorted_g4_v8.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v9.fq --out align_g4_v9.sam --threads 16
+SAMTOOLS SORT --in align_g4_v9.sam --out sorted_g4_v9.bam --threads 16
+SAMTOOLS INDEX --in sorted_g4_v9.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_v10.fq --out align_g4_v10.sam --threads 4
+SAMTOOLS SORT --in align_g4_v10.sam --out sorted_g4_v10.bam --threads 4
+SAMTOOLS INDEX --in sorted_g4_v10.bam",0,STATIC_VALID,Valid baseline (Reference Indexing First: BWA INDEX -> BWA MEM -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,2,1,0,3,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"SAMTOOLS INDEX --in sorted_g4_f1.bam
+BWA MEM --ref reference.fa --in reads_g4_f1.fq --out align_g4_f1.sam --threads 2
+SAMTOOLS SORT --in align_g4_f1.sam --out sorted_g4_f1.bam --threads 2
+BWA INDEX --ref reference.fa",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_04_INDEX_REF_FIRST
+0,0,0,0,0,1,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_f2.fq --out align_g4_f2.sam --threads 2
+SAMTOOLS SORT --in align_g4_f2.sam --out sorted_g4_f2.bam --threads -2
+SAMTOOLS INDEX --in sorted_g4_f2.bam",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_04_INDEX_REF_FIRST
+0,0,0,1,1,2,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in non_existent_intermediate_file.bam --out align_g4_f3.sam --threads 4
+SAMTOOLS SORT --in align_g4_f3.sam --out sorted_g4_f3.bam --threads 4
+SAMTOOLS INDEX --in sorted_g4_f3.bam",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_04_INDEX_REF_FIRST
+0,0,0,0,0,1,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_f4.fq --out align_g4_f4.sam --threads -2
+SAMTOOLS SORT --in align_g4_f4.sam --out sorted_g4_f4.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f4.bam",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_04_INDEX_REF_FIRST
+0,0,0,1,1,2,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in non_existent_intermediate_file.bam --out align_g4_f5.sam --threads 2
+SAMTOOLS SORT --in align_g4_f5.sam --out sorted_g4_f5.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f5.bam",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_04_INDEX_REF_FIRST
+0,0,0,1,1,2,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_f6.fq --out align_g4_f6.pdf --threads 2
+SAMTOOLS SORT --in align_g4_f6.sam --out sorted_g4_f6.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f6.bam",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_04_INDEX_REF_FIRST
+0,0,0,2,0,3,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_f7.fq --out align_g4_f7.sam --threads 2
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f7.bam",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_04_INDEX_REF_FIRST
+0,0,0,1,1,2,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in non_existent_intermediate_file.bam --out align_g4_f8.sam --threads 4
+SAMTOOLS SORT --in align_g4_f8.sam --out sorted_g4_f8.bam --threads 4
+SAMTOOLS INDEX --in sorted_g4_f8.bam",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_04_INDEX_REF_FIRST
+0,0,0,1,1,2,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INDEX --ref reference.fa
+BWA MEM --ref reference.fa --in non_existent_intermediate_file.bam --out align_g4_f9.sam --threads 2
+SAMTOOLS SORT --in align_g4_f9.sam --out sorted_g4_f9.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f9.bam",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_04_INDEX_REF_FIRST
+1,0,0,0,0,1,1,4,0,1,0,0.5,0,GRP_04_INDEX_REF_FIRST,"BWA INVALID_SUBCOMMAND --ref reference.fa
+BWA MEM --ref reference.fa --in reads_g4_f10.fq --out align_g4_f10.sam --threads 2
+SAMTOOLS SORT --in align_g4_f10.sam --out sorted_g4_f10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g4_f10.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_04_INDEX_REF_FIRST
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v1.fq --out align_g5_v1.sam --threads 4
+SAMTOOLS SORT --in align_g5_v1.sam --out sorted_g5_v1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g5_v1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v1.bam --out variants_g5_v1.vcf
+FASTQC --in reads_g5_v1.fq --out qc_g5_v1.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v2.fq --out align_g5_v2.sam --threads 2
+SAMTOOLS SORT --in align_g5_v2.sam --out sorted_g5_v2.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_v2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v2.bam --out variants_g5_v2.vcf
+FASTQC --in reads_g5_v2.fq --out qc_g5_v2.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v3.fq --out align_g5_v3.sam --threads 2
+SAMTOOLS SORT --in align_g5_v3.sam --out sorted_g5_v3.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_v3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v3.bam --out variants_g5_v3.vcf
+FASTQC --in reads_g5_v3.fq --out qc_g5_v3.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v4.fq --out align_g5_v4.sam --threads 16
+SAMTOOLS SORT --in align_g5_v4.sam --out sorted_g5_v4.bam --threads 16
+SAMTOOLS INDEX --in sorted_g5_v4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v4.bam --out variants_g5_v4.vcf
+FASTQC --in reads_g5_v4.fq --out qc_g5_v4.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v5.fq --out align_g5_v5.sam --threads 8
+SAMTOOLS SORT --in align_g5_v5.sam --out sorted_g5_v5.bam --threads 8
+SAMTOOLS INDEX --in sorted_g5_v5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v5.bam --out variants_g5_v5.vcf
+FASTQC --in reads_g5_v5.fq --out qc_g5_v5.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v6.fq --out align_g5_v6.sam --threads 8
+SAMTOOLS SORT --in align_g5_v6.sam --out sorted_g5_v6.bam --threads 8
+SAMTOOLS INDEX --in sorted_g5_v6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v6.bam --out variants_g5_v6.vcf
+FASTQC --in reads_g5_v6.fq --out qc_g5_v6.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v7.fq --out align_g5_v7.sam --threads 8
+SAMTOOLS SORT --in align_g5_v7.sam --out sorted_g5_v7.bam --threads 8
+SAMTOOLS INDEX --in sorted_g5_v7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v7.bam --out variants_g5_v7.vcf
+FASTQC --in reads_g5_v7.fq --out qc_g5_v7.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v8.fq --out align_g5_v8.sam --threads 4
+SAMTOOLS SORT --in align_g5_v8.sam --out sorted_g5_v8.bam --threads 4
+SAMTOOLS INDEX --in sorted_g5_v8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v8.bam --out variants_g5_v8.vcf
+FASTQC --in reads_g5_v8.fq --out qc_g5_v8.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v9.fq --out align_g5_v9.sam --threads 16
+SAMTOOLS SORT --in align_g5_v9.sam --out sorted_g5_v9.bam --threads 16
+SAMTOOLS INDEX --in sorted_g5_v9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v9.bam --out variants_g5_v9.vcf
+FASTQC --in reads_g5_v9.fq --out qc_g5_v9.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,0,0,0,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_v10.fq --out align_g5_v10.sam --threads 2
+SAMTOOLS SORT --in align_g5_v10.sam --out sorted_g5_v10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_v10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_v10.bam --out variants_g5_v10.vcf
+FASTQC --in reads_g5_v10.fq --out qc_g5_v10.html",0,STATIC_VALID,Valid baseline (Alignment to Variant Discovery with QC: BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller -> FASTQC)
+0,0,0,3,0,4,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f1.fq --out align_g5_f1.sam --threads 4
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 4
+SAMTOOLS INDEX --in sorted_g5_f1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f1.bam --out variants_g5_f1.vcf
+FASTQC --in reads_g5_f1.fq --out qc_g5_f1.html",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,1,0,1,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f2.fq --out align_g5_f2.sam --threads 2
+SAMTOOLS SORT --in non_existent_intermediate_file.bam --out sorted_g5_f2.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_f2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f2.bam --out variants_g5_f2.vcf
+FASTQC --in reads_g5_f2.fq --out qc_g5_f2.html",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,0,0,1,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f3.fq --out align_g5_f3.sam --threads -2
+SAMTOOLS SORT --in align_g5_f3.sam --out sorted_g5_f3.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_f3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f3.bam --out variants_g5_f3.vcf
+FASTQC --in reads_g5_f3.fq --out qc_g5_f3.html",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_05_ALIGN_VARS_FASTQC
+1,0,0,0,0,2,1,5,1,1,1,0.8,1,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f4.fq --out align_g5_f4.sam --threads 4
+SAMTOOLS SORT --in align_g5_f4.sam --out sorted_g5_f4.bam --threads 4
+SAMTOOLS INDEX --in sorted_g5_f4.bam --threads
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f4.bam --out variants_g5_f4.vcf
+FASTQC --in reads_g5_f4.fq --out qc_g5_f4.html",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,0,0,1,1,4,1,1,1,1.0,1,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f5.fq --out align_g5_f5.sam --threads 4
+SAMTOOLS SORT --in align_g5_f5.sam --out sorted_g5_f5.bam --threads 4
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f5.bam --out variants_g5_f5.vcf
+FASTQC --in reads_g5_f5.fq --out qc_g5_f5.html",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,0,0,1,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f6.fq --out align_g5_f6.sam --threads -8
+SAMTOOLS SORT --in align_g5_f6.sam --out sorted_g5_f6.bam --threads 8
+SAMTOOLS INDEX --in sorted_g5_f6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f6.bam --out variants_g5_f6.vcf
+FASTQC --in reads_g5_f6.fq --out qc_g5_f6.html",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,0,0,1,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f7.fq --out align_g5_f7.sam --threads -8
+SAMTOOLS SORT --in align_g5_f7.sam --out sorted_g5_f7.bam --threads 8
+SAMTOOLS INDEX --in sorted_g5_f7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f7.bam --out variants_g5_f7.vcf
+FASTQC --in reads_g5_f7.fq --out qc_g5_f7.html",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_05_ALIGN_VARS_FASTQC
+1,0,1,1,0,3,1,5,1,1,1,0.8,0,GRP_05_ALIGN_VARS_FASTQC,"BWA INVALID_SUBCOMMAND --ref reference.fa --in reads_g5_f8.fq --out align_g5_f8.sam --threads 2
+SAMTOOLS SORT --in align_g5_f8.sam --out sorted_g5_f8.bam --threads 2
+SAMTOOLS INDEX --in sorted_g5_f8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f8.bam --out variants_g5_f8.vcf
+FASTQC --in reads_g5_f8.fq --out qc_g5_f8.html",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_05_ALIGN_VARS_FASTQC
+0,1,0,0,0,2,1,5,1,1,1,0.8,1,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f9.fq --out align_g5_f9.sam --threads 8
+SAMTOOLS SORT --in align_g5_f9.sam --out sorted_g5_f9.bam --threads 8
+SAMTOOLS INDEX
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f9.bam --out variants_g5_f9.vcf
+FASTQC --in reads_g5_f9.fq --out qc_g5_f9.html",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_05_ALIGN_VARS_FASTQC
+1,0,0,0,0,2,1,5,1,1,1,0.8,1,GRP_05_ALIGN_VARS_FASTQC,"BWA MEM --ref reference.fa --in reads_g5_f10.fq --out align_g5_f10.sam --threads 4
+SAMTOOLS SORT --in align_g5_f10.sam --out sorted_g5_f10.bam --threads 4
+SAMTOOLS INDEX --in sorted_g5_f10.bam --threads
+GATK HaplotypeCaller --ref reference.fa --in sorted_g5_f10.bam --out variants_g5_f10.vcf
+FASTQC --in reads_g5_f10.fq --out qc_g5_f10.html",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_05_ALIGN_VARS_FASTQC
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v1.fq --out align_g6_v1.sam --threads 4
+SAMTOOLS SORT --in align_g6_v1.sam --out sorted_g6_v1.bam --threads 4
+GATK MarkDuplicates --in sorted_g6_v1.bam --out dedup_g6_v1.bam --metrics dedup_g6_v1.metrics
+SAMTOOLS INDEX --in dedup_g6_v1.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v1.bam --out variants_g6_v1.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v2.fq --out align_g6_v2.sam --threads 16
+SAMTOOLS SORT --in align_g6_v2.sam --out sorted_g6_v2.bam --threads 16
+GATK MarkDuplicates --in sorted_g6_v2.bam --out dedup_g6_v2.bam --metrics dedup_g6_v2.metrics
+SAMTOOLS INDEX --in dedup_g6_v2.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v2.bam --out variants_g6_v2.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v3.fq --out align_g6_v3.sam --threads 2
+SAMTOOLS SORT --in align_g6_v3.sam --out sorted_g6_v3.bam --threads 2
+GATK MarkDuplicates --in sorted_g6_v3.bam --out dedup_g6_v3.bam --metrics dedup_g6_v3.metrics
+SAMTOOLS INDEX --in dedup_g6_v3.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v3.bam --out variants_g6_v3.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v4.fq --out align_g6_v4.sam --threads 16
+SAMTOOLS SORT --in align_g6_v4.sam --out sorted_g6_v4.bam --threads 16
+GATK MarkDuplicates --in sorted_g6_v4.bam --out dedup_g6_v4.bam --metrics dedup_g6_v4.metrics
+SAMTOOLS INDEX --in dedup_g6_v4.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v4.bam --out variants_g6_v4.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v5.fq --out align_g6_v5.sam --threads 2
+SAMTOOLS SORT --in align_g6_v5.sam --out sorted_g6_v5.bam --threads 2
+GATK MarkDuplicates --in sorted_g6_v5.bam --out dedup_g6_v5.bam --metrics dedup_g6_v5.metrics
+SAMTOOLS INDEX --in dedup_g6_v5.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v5.bam --out variants_g6_v5.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v6.fq --out align_g6_v6.sam --threads 8
+SAMTOOLS SORT --in align_g6_v6.sam --out sorted_g6_v6.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_v6.bam --out dedup_g6_v6.bam --metrics dedup_g6_v6.metrics
+SAMTOOLS INDEX --in dedup_g6_v6.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v6.bam --out variants_g6_v6.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v7.fq --out align_g6_v7.sam --threads 8
+SAMTOOLS SORT --in align_g6_v7.sam --out sorted_g6_v7.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_v7.bam --out dedup_g6_v7.bam --metrics dedup_g6_v7.metrics
+SAMTOOLS INDEX --in dedup_g6_v7.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v7.bam --out variants_g6_v7.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v8.fq --out align_g6_v8.sam --threads 16
+SAMTOOLS SORT --in align_g6_v8.sam --out sorted_g6_v8.bam --threads 16
+GATK MarkDuplicates --in sorted_g6_v8.bam --out dedup_g6_v8.bam --metrics dedup_g6_v8.metrics
+SAMTOOLS INDEX --in dedup_g6_v8.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v8.bam --out variants_g6_v8.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v9.fq --out align_g6_v9.sam --threads 2
+SAMTOOLS SORT --in align_g6_v9.sam --out sorted_g6_v9.bam --threads 2
+GATK MarkDuplicates --in sorted_g6_v9.bam --out dedup_g6_v9.bam --metrics dedup_g6_v9.metrics
+SAMTOOLS INDEX --in dedup_g6_v9.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v9.bam --out variants_g6_v9.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_v10.fq --out align_g6_v10.sam --threads 2
+SAMTOOLS SORT --in align_g6_v10.sam --out sorted_g6_v10.bam --threads 2
+GATK MarkDuplicates --in sorted_g6_v10.bam --out dedup_g6_v10.bam --metrics dedup_g6_v10.metrics
+SAMTOOLS INDEX --in dedup_g6_v10.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_v10.bam --out variants_g6_v10.vcf",0,STATIC_VALID,Valid baseline (Deduplication Pipeline: BWA MEM -> SORT -> GATK MarkDuplicates -> INDEX -> GATK HaplotypeCaller)
+0,0,0,1,1,2,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f1.fq --out align_g6_f1.pdf --threads 8
+SAMTOOLS SORT --in align_g6_f1.sam --out sorted_g6_f1.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f1.bam --out dedup_g6_f1.bam --metrics dedup_g6_f1.metrics
+SAMTOOLS INDEX --in dedup_g6_f1.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f1.bam --out variants_g6_f1.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_06_ALIGN_DEDUP_VARS
+0,1,0,0,0,2,1,5,0,1,1,0.6,1,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f2.fq --out align_g6_f2.sam --threads 8
+SAMTOOLS SORT --in align_g6_f2.sam --out sorted_g6_f2.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f2.bam --out dedup_g6_f2.bam --metrics dedup_g6_f2.metrics
+SAMTOOLS INDEX
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f2.bam --out variants_g6_f2.vcf",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_06_ALIGN_DEDUP_VARS
+0,0,0,0,0,1,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f3.fq --out align_g6_f3.sam --threads 2
+SAMTOOLS SORT --in align_g6_f3.sam --out sorted_g6_f3.bam --threads -2
+GATK MarkDuplicates --in sorted_g6_f3.bam --out dedup_g6_f3.bam --metrics dedup_g6_f3.metrics
+SAMTOOLS INDEX --in dedup_g6_f3.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f3.bam --out variants_g6_f3.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_06_ALIGN_DEDUP_VARS
+2,0,1,1,0,4,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f4.fq --out align_g6_f4.sam --threads 2
+SAMTOOLS SORT --in align_g6_f4.sam --out sorted_g6_f4.bam --threads 2 --threads
+GATK MarkDuplicates --in sorted_g6_f4.bam --out dedup_g6_f4.bam --metrics dedup_g6_f4.metrics
+SAMTOOLS INDEX --in dedup_g6_f4.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f4.bam --out variants_g6_f4.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_06_ALIGN_DEDUP_VARS
+0,0,0,1,1,2,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f5.fq --out align_g6_f5.pdf --threads 8
+SAMTOOLS SORT --in align_g6_f5.sam --out sorted_g6_f5.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f5.bam --out dedup_g6_f5.bam --metrics dedup_g6_f5.metrics
+SAMTOOLS INDEX --in dedup_g6_f5.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f5.bam --out variants_g6_f5.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_06_ALIGN_DEDUP_VARS
+0,0,0,2,0,3,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f6.fq --out align_g6_f6.sam --threads 8
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f6.bam --out dedup_g6_f6.bam --metrics dedup_g6_f6.metrics
+SAMTOOLS INDEX --in dedup_g6_f6.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f6.bam --out variants_g6_f6.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_06_ALIGN_DEDUP_VARS
+2,0,1,1,0,4,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f7.fq --out align_g6_f7.sam --threads 8
+SAMTOOLS SORT --in align_g6_f7.sam --out sorted_g6_f7.bam --threads 8 --threads
+GATK MarkDuplicates --in sorted_g6_f7.bam --out dedup_g6_f7.bam --metrics dedup_g6_f7.metrics
+SAMTOOLS INDEX --in dedup_g6_f7.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f7.bam --out variants_g6_f7.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_06_ALIGN_DEDUP_VARS
+1,0,1,1,0,3,1,4,0,1,1,0.75,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f8.fq --out align_g6_f8.sam --threads 2
+SAMTOOL_CLI SORT --in align_g6_f8.sam --out sorted_g6_f8.bam --threads 2
+GATK MarkDuplicates --in sorted_g6_f8.bam --out dedup_g6_f8.bam --metrics dedup_g6_f8.metrics
+SAMTOOLS INDEX --in dedup_g6_f8.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f8.bam --out variants_g6_f8.vcf",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_06_ALIGN_DEDUP_VARS
+0,0,2,2,0,5,1,5,0,1,1,0.6,1,GRP_06_ALIGN_DEDUP_VARS,"GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f9.bam --out variants_g6_f9.vcf
+SAMTOOLS SORT --in align_g6_f9.sam --out sorted_g6_f9.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f9.bam --out dedup_g6_f9.bam --metrics dedup_g6_f9.metrics
+SAMTOOLS INDEX --in dedup_g6_f9.bam
+BWA MEM --ref reference.fa --in reads_g6_f9.fq --out align_g6_f9.sam --threads 8",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_06_ALIGN_DEDUP_VARS
+1,0,0,2,0,3,1,5,0,1,1,0.6,0,GRP_06_ALIGN_DEDUP_VARS,"BWA MEM --ref reference.fa --in reads_g6_f10.fq --out align_g6_f10.sam --threads 8
+SAMTOOLS SORT --in align_g6_f10.sam --out sorted_g6_f10.bam --threads 8
+GATK MarkDuplicates --in sorted_g6_f10.bam --out dedup_g6_f10.bam --metrics dedup_g6_f10.metrics --threads
+SAMTOOLS INDEX --in dedup_g6_f10.bam
+GATK HaplotypeCaller --ref reference.fa --in dedup_g6_f10.bam --out variants_g6_f10.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_06_ALIGN_DEDUP_VARS
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v1.fastq --out qc_g7_v1.html
+TRIMMOMATIC --in reads_g7_v1.fastq --out clean_g7_v1.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v1.fq --out align_g7_v1.sam --threads 4
+SAMTOOLS SORT --in align_g7_v1.sam --out sorted_g7_v1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g7_v1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v1.bam --out variants_g7_v1.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v2.fastq --out qc_g7_v2.html
+TRIMMOMATIC --in reads_g7_v2.fastq --out clean_g7_v2.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v2.fq --out align_g7_v2.sam --threads 16
+SAMTOOLS SORT --in align_g7_v2.sam --out sorted_g7_v2.bam --threads 16
+SAMTOOLS INDEX --in sorted_g7_v2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v2.bam --out variants_g7_v2.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v3.fastq --out qc_g7_v3.html
+TRIMMOMATIC --in reads_g7_v3.fastq --out clean_g7_v3.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v3.fq --out align_g7_v3.sam --threads 16
+SAMTOOLS SORT --in align_g7_v3.sam --out sorted_g7_v3.bam --threads 16
+SAMTOOLS INDEX --in sorted_g7_v3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v3.bam --out variants_g7_v3.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v4.fastq --out qc_g7_v4.html
+TRIMMOMATIC --in reads_g7_v4.fastq --out clean_g7_v4.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v4.fq --out align_g7_v4.sam --threads 4
+SAMTOOLS SORT --in align_g7_v4.sam --out sorted_g7_v4.bam --threads 4
+SAMTOOLS INDEX --in sorted_g7_v4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v4.bam --out variants_g7_v4.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v5.fastq --out qc_g7_v5.html
+TRIMMOMATIC --in reads_g7_v5.fastq --out clean_g7_v5.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v5.fq --out align_g7_v5.sam --threads 8
+SAMTOOLS SORT --in align_g7_v5.sam --out sorted_g7_v5.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_v5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v5.bam --out variants_g7_v5.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v6.fastq --out qc_g7_v6.html
+TRIMMOMATIC --in reads_g7_v6.fastq --out clean_g7_v6.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v6.fq --out align_g7_v6.sam --threads 4
+SAMTOOLS SORT --in align_g7_v6.sam --out sorted_g7_v6.bam --threads 4
+SAMTOOLS INDEX --in sorted_g7_v6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v6.bam --out variants_g7_v6.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v7.fastq --out qc_g7_v7.html
+TRIMMOMATIC --in reads_g7_v7.fastq --out clean_g7_v7.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v7.fq --out align_g7_v7.sam --threads 2
+SAMTOOLS SORT --in align_g7_v7.sam --out sorted_g7_v7.bam --threads 2
+SAMTOOLS INDEX --in sorted_g7_v7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v7.bam --out variants_g7_v7.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v8.fastq --out qc_g7_v8.html
+TRIMMOMATIC --in reads_g7_v8.fastq --out clean_g7_v8.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v8.fq --out align_g7_v8.sam --threads 16
+SAMTOOLS SORT --in align_g7_v8.sam --out sorted_g7_v8.bam --threads 16
+SAMTOOLS INDEX --in sorted_g7_v8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v8.bam --out variants_g7_v8.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v9.fastq --out qc_g7_v9.html
+TRIMMOMATIC --in reads_g7_v9.fastq --out clean_g7_v9.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v9.fq --out align_g7_v9.sam --threads 8
+SAMTOOLS SORT --in align_g7_v9.sam --out sorted_g7_v9.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_v9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v9.bam --out variants_g7_v9.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_v10.fastq --out qc_g7_v10.html
+TRIMMOMATIC --in reads_g7_v10.fastq --out clean_g7_v10.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_v10.fq --out align_g7_v10.sam --threads 8
+SAMTOOLS SORT --in align_g7_v10.sam --out sorted_g7_v10.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_v10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_v10.bam --out variants_g7_v10.vcf",0,STATIC_VALID,Valid baseline (Standard 6-Step WGS: FASTQC -> TRIMMOMATIC -> BWA MEM -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,2,1,0,4,1,6,1,1,1,0.8333,1,GRP_07_STANDARD_WGS,"GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f1.bam --out variants_g7_f1.vcf
+TRIMMOMATIC --in reads_g7_f1.fastq --out clean_g7_f1.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f1.fq --out align_g7_f1.sam --threads 8
+SAMTOOLS SORT --in align_g7_f1.sam --out sorted_g7_f1.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f1.bam
+FASTQC --in reads_g7_f1.fastq --out qc_g7_f1.html",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_07_STANDARD_WGS
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f2.fastq --out qc_g7_f2.html
+TRIMMOMATIC --in reads_g7_f2.fastq --out clean_g7_f2.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f2.fq --out align_g7_f2.pdf --threads 8
+SAMTOOLS SORT --in align_g7_f2.sam --out sorted_g7_f2.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f2.bam --out variants_g7_f2.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_07_STANDARD_WGS
+0,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f3.fastq --out qc_g7_f3.html
+TRIMMOMATIC --in reads_g7_f3.fastq --out clean_g7_f3.fq --minlen 30 --slidingwindow invalid_window
+BWA MEM --ref reference.fa --in clean_g7_f3.fq --out align_g7_f3.sam --threads 2
+SAMTOOLS SORT --in align_g7_f3.sam --out sorted_g7_f3.bam --threads 2
+SAMTOOLS INDEX --in sorted_g7_f3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f3.bam --out variants_g7_f3.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_07_STANDARD_WGS
+1,0,0,0,0,1,0,5,1,1,1,0.8,0,GRP_07_STANDARD_WGS,"FASTQC_PRO --in reads_g7_f4.fastq --out qc_g7_f4.html
+TRIMMOMATIC --in reads_g7_f4.fastq --out clean_g7_f4.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f4.fq --out align_g7_f4.sam --threads 8
+SAMTOOLS SORT --in align_g7_f4.sam --out sorted_g7_f4.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f4.bam --out variants_g7_f4.vcf",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_07_STANDARD_WGS
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f5.fastq --out qc_g7_f5.html
+TRIMMOMATIC --in reads_g7_f5.fastq --out clean_g7_f5.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f5.fq --out align_g7_f5.pdf --threads 8
+SAMTOOLS SORT --in align_g7_f5.sam --out sorted_g7_f5.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f5.bam --out variants_g7_f5.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_07_STANDARD_WGS
+0,0,2,1,0,4,1,6,1,1,1,0.8333,1,GRP_07_STANDARD_WGS,"GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f6.bam --out variants_g7_f6.vcf
+TRIMMOMATIC --in reads_g7_f6.fastq --out clean_g7_f6.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f6.fq --out align_g7_f6.sam --threads 8
+SAMTOOLS SORT --in align_g7_f6.sam --out sorted_g7_f6.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f6.bam
+FASTQC --in reads_g7_f6.fastq --out qc_g7_f6.html",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_07_STANDARD_WGS
+1,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f7.fastq --out qc_g7_f7.html
+TRIMMOMATIC --in reads_g7_f7.fastq --out clean_g7_f7.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f7.fq --out align_g7_f7.sam --threads 8
+SAMTOOLS SORT --in align_g7_f7.sam --out sorted_g7_f7.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f7.bam
+GATK INVALID_SUBCOMMAND --ref reference.fa --in sorted_g7_f7.bam --out variants_g7_f7.vcf",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_07_STANDARD_WGS
+0,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f8.fastq --out qc_g7_f8.html
+TRIMMOMATIC --in reads_g7_f8.fastq --out clean_g7_f8.fq --minlen 30 --slidingwindow invalid_window
+BWA MEM --ref reference.fa --in clean_g7_f8.fq --out align_g7_f8.sam --threads 8
+SAMTOOLS SORT --in align_g7_f8.sam --out sorted_g7_f8.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f8.bam --out variants_g7_f8.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_07_STANDARD_WGS
+1,0,0,0,0,2,0,5,1,1,1,1.0,1,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f9.fastq --out qc_g7_f9.html
+TRIMMOMATIC --in reads_g7_f9.fastq --out clean_g7_f9.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f9.fq --out align_g7_f9.sam --threads 8
+SAMTOOLS SORT --in align_g7_f9.sam --out sorted_g7_f9.bam --threads 8
+SAMTOOL_CLI INDEX --in sorted_g7_f9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f9.bam --out variants_g7_f9.vcf",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_07_STANDARD_WGS
+2,0,1,1,0,4,0,6,1,1,1,0.8333,0,GRP_07_STANDARD_WGS,"FASTQC --in reads_g7_f10.fastq --out qc_g7_f10.html
+TRIMMOMATIC --in reads_g7_f10.fastq --out clean_g7_f10.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g7_f10.fq --out align_g7_f10.sam --threads 8 --threads
+SAMTOOLS SORT --in align_g7_f10.sam --out sorted_g7_f10.bam --threads 8
+SAMTOOLS INDEX --in sorted_g7_f10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g7_f10.bam --out variants_g7_f10.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_07_STANDARD_WGS
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v1.fastq --out qc_g8_v1.html
+TRIMMOMATIC --in reads_g8_v1.fastq --out clean_g8_v1.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v1.fq --out align_g8_v1.sam --threads 16
+SAMTOOLS VIEW --in align_g8_v1.sam --out align_g8_v1.bam --threads 16
+SAMTOOLS SORT --in align_g8_v1.bam --out sorted_g8_v1.bam --threads 16
+SAMTOOLS INDEX --in sorted_g8_v1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v1.bam --out variants_g8_v1.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v2.fastq --out qc_g8_v2.html
+TRIMMOMATIC --in reads_g8_v2.fastq --out clean_g8_v2.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v2.fq --out align_g8_v2.sam --threads 8
+SAMTOOLS VIEW --in align_g8_v2.sam --out align_g8_v2.bam --threads 8
+SAMTOOLS SORT --in align_g8_v2.bam --out sorted_g8_v2.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_v2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v2.bam --out variants_g8_v2.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v3.fastq --out qc_g8_v3.html
+TRIMMOMATIC --in reads_g8_v3.fastq --out clean_g8_v3.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v3.fq --out align_g8_v3.sam --threads 2
+SAMTOOLS VIEW --in align_g8_v3.sam --out align_g8_v3.bam --threads 2
+SAMTOOLS SORT --in align_g8_v3.bam --out sorted_g8_v3.bam --threads 2
+SAMTOOLS INDEX --in sorted_g8_v3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v3.bam --out variants_g8_v3.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v4.fastq --out qc_g8_v4.html
+TRIMMOMATIC --in reads_g8_v4.fastq --out clean_g8_v4.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v4.fq --out align_g8_v4.sam --threads 8
+SAMTOOLS VIEW --in align_g8_v4.sam --out align_g8_v4.bam --threads 8
+SAMTOOLS SORT --in align_g8_v4.bam --out sorted_g8_v4.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_v4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v4.bam --out variants_g8_v4.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v5.fastq --out qc_g8_v5.html
+TRIMMOMATIC --in reads_g8_v5.fastq --out clean_g8_v5.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v5.fq --out align_g8_v5.sam --threads 8
+SAMTOOLS VIEW --in align_g8_v5.sam --out align_g8_v5.bam --threads 8
+SAMTOOLS SORT --in align_g8_v5.bam --out sorted_g8_v5.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_v5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v5.bam --out variants_g8_v5.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v6.fastq --out qc_g8_v6.html
+TRIMMOMATIC --in reads_g8_v6.fastq --out clean_g8_v6.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v6.fq --out align_g8_v6.sam --threads 8
+SAMTOOLS VIEW --in align_g8_v6.sam --out align_g8_v6.bam --threads 8
+SAMTOOLS SORT --in align_g8_v6.bam --out sorted_g8_v6.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_v6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v6.bam --out variants_g8_v6.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v7.fastq --out qc_g8_v7.html
+TRIMMOMATIC --in reads_g8_v7.fastq --out clean_g8_v7.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v7.fq --out align_g8_v7.sam --threads 4
+SAMTOOLS VIEW --in align_g8_v7.sam --out align_g8_v7.bam --threads 4
+SAMTOOLS SORT --in align_g8_v7.bam --out sorted_g8_v7.bam --threads 4
+SAMTOOLS INDEX --in sorted_g8_v7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v7.bam --out variants_g8_v7.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v8.fastq --out qc_g8_v8.html
+TRIMMOMATIC --in reads_g8_v8.fastq --out clean_g8_v8.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v8.fq --out align_g8_v8.sam --threads 16
+SAMTOOLS VIEW --in align_g8_v8.sam --out align_g8_v8.bam --threads 16
+SAMTOOLS SORT --in align_g8_v8.bam --out sorted_g8_v8.bam --threads 16
+SAMTOOLS INDEX --in sorted_g8_v8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v8.bam --out variants_g8_v8.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v9.fastq --out qc_g8_v9.html
+TRIMMOMATIC --in reads_g8_v9.fastq --out clean_g8_v9.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v9.fq --out align_g8_v9.sam --threads 8
+SAMTOOLS VIEW --in align_g8_v9.sam --out align_g8_v9.bam --threads 8
+SAMTOOLS SORT --in align_g8_v9.bam --out sorted_g8_v9.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_v9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v9.bam --out variants_g8_v9.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_v10.fastq --out qc_g8_v10.html
+TRIMMOMATIC --in reads_g8_v10.fastq --out clean_g8_v10.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_v10.fq --out align_g8_v10.sam --threads 2
+SAMTOOLS VIEW --in align_g8_v10.sam --out align_g8_v10.bam --threads 2
+SAMTOOLS SORT --in align_g8_v10.bam --out sorted_g8_v10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g8_v10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_v10.bam --out variants_g8_v10.vcf",0,STATIC_VALID,Valid baseline (Full 7-Step Germline: FASTQC -> TRIM -> BWA MEM -> SAMTOOLS VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,2,1,0,4,1,7,1,1,1,0.7143,1,GRP_08_FULL_GERMLINE,"GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f1.bam --out variants_g8_f1.vcf
+TRIMMOMATIC --in reads_g8_f1.fastq --out clean_g8_f1.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f1.fq --out align_g8_f1.sam --threads 4
+SAMTOOLS VIEW --in align_g8_f1.sam --out align_g8_f1.bam --threads 4
+SAMTOOLS SORT --in align_g8_f1.bam --out sorted_g8_f1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g8_f1.bam
+FASTQC --in reads_g8_f1.fastq --out qc_g8_f1.html",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_08_FULL_GERMLINE
+0,0,0,1,1,2,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f2.fastq --out qc_g8_f2.html
+TRIMMOMATIC --in reads_g8_f2.fastq --out clean_g8_f2.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f2.fq --out align_g8_f2.pdf --threads 8
+SAMTOOLS VIEW --in align_g8_f2.sam --out align_g8_f2.bam --threads 8
+SAMTOOLS SORT --in align_g8_f2.bam --out sorted_g8_f2.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_f2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f2.bam --out variants_g8_f2.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_08_FULL_GERMLINE
+0,0,0,0,0,1,0,6,1,1,1,0.8333,1,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f3.fastq --out qc_g8_f3.html
+TRIMMOMATIC --in reads_g8_f3.fastq --out clean_g8_f3.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f3.fq --out align_g8_f3.sam --threads 4
+SAMTOOLS VIEW --in align_g8_f3.sam --out align_g8_f3.bam --threads 4
+SAMTOOLS SORT --in align_g8_f3.bam --out sorted_g8_f3.bam --threads 4
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f3.bam --out variants_g8_f3.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_08_FULL_GERMLINE
+0,0,0,1,1,2,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f4.fastq --out qc_g8_f4.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g8_f4.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f4.fq --out align_g8_f4.sam --threads 8
+SAMTOOLS VIEW --in align_g8_f4.sam --out align_g8_f4.bam --threads 8
+SAMTOOLS SORT --in align_g8_f4.bam --out sorted_g8_f4.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_f4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f4.bam --out variants_g8_f4.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_08_FULL_GERMLINE
+0,1,0,0,0,2,0,7,1,1,1,0.7143,1,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f5.fastq --out qc_g8_f5.html
+TRIMMOMATIC --in reads_g8_f5.fastq --out clean_g8_f5.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f5.fq --out align_g8_f5.sam --threads 4
+SAMTOOLS VIEW --in align_g8_f5.sam --out align_g8_f5.bam --threads 4
+SAMTOOLS SORT --in align_g8_f5.bam --out sorted_g8_f5.bam --threads 4
+SAMTOOLS INDEX
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f5.bam --out variants_g8_f5.vcf",1,STATIC_INVALID,Mutated failure (MISSING_REQUIRED_PARAM) in GRP_08_FULL_GERMLINE
+0,0,0,1,1,2,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f6.fastq --out qc_g8_f6.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g8_f6.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f6.fq --out align_g8_f6.sam --threads 2
+SAMTOOLS VIEW --in align_g8_f6.sam --out align_g8_f6.bam --threads 2
+SAMTOOLS SORT --in align_g8_f6.bam --out sorted_g8_f6.bam --threads 2
+SAMTOOLS INDEX --in sorted_g8_f6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f6.bam --out variants_g8_f6.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_08_FULL_GERMLINE
+0,0,0,3,0,4,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f7.fastq --out qc_g8_f7.html
+TRIMMOMATIC --in reads_g8_f7.fastq --out clean_g8_f7.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f7.fq --out align_g8_f7.sam --threads 8
+SAMTOOLS VIEW --in align_g8_f7.sam --out align_g8_f7.bam --threads 8
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 8
+SAMTOOLS INDEX --in sorted_g8_f7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f7.bam --out variants_g8_f7.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_08_FULL_GERMLINE
+1,0,0,0,0,2,0,7,1,1,1,0.7143,1,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f8.fastq --out qc_g8_f8.html
+TRIMMOMATIC --in reads_g8_f8.fastq --out clean_g8_f8.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f8.fq --out align_g8_f8.sam --threads 4
+SAMTOOLS VIEW --in align_g8_f8.sam --out align_g8_f8.bam --threads 4
+SAMTOOLS SORT --in align_g8_f8.bam --out sorted_g8_f8.bam --threads 4
+SAMTOOLS INDEX --in sorted_g8_f8.bam --threads
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f8.bam --out variants_g8_f8.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_08_FULL_GERMLINE
+1,0,0,0,0,1,1,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f9.fastq --out qc_g8_f9.html
+TRIMMOMATIC --in reads_g8_f9.fastq --out clean_g8_f9.fq --minlen 30 --slidingwindow 4:20 --threads
+BWA MEM --ref reference.fa --in clean_g8_f9.fq --out align_g8_f9.sam --threads 4
+SAMTOOLS VIEW --in align_g8_f9.sam --out align_g8_f9.bam --threads 4
+SAMTOOLS SORT --in align_g8_f9.bam --out sorted_g8_f9.bam --threads 4
+SAMTOOLS INDEX --in sorted_g8_f9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f9.bam --out variants_g8_f9.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_08_FULL_GERMLINE
+2,0,0,1,0,3,0,7,1,1,1,0.7143,0,GRP_08_FULL_GERMLINE,"FASTQC --in reads_g8_f10.fastq --out qc_g8_f10.html
+TRIMMOMATIC --in reads_g8_f10.fastq --out clean_g8_f10.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g8_f10.fq --out align_g8_f10.sam --threads 2
+SAMTOOLS VIEW --in align_g8_f10.sam --out align_g8_f10.bam --threads 2 --threads
+SAMTOOLS SORT --in align_g8_f10.bam --out sorted_g8_f10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g8_f10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g8_f10.bam --out variants_g8_f10.vcf",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_08_FULL_GERMLINE
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v1.fastq --out qc_g9_v1.html
+TRIMMOMATIC --in reads_g9_v1.fastq --out clean_g9_v1.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v1.fq --out align_g9_v1.sam --threads 2
+SAMTOOLS SORT --in align_g9_v1.sam --out sorted_g9_v1.bam --threads 2
+SAMTOOLS INDEX --in sorted_g9_v1.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v1.bam --out variants_g9_v1.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v2.fastq --out qc_g9_v2.html
+TRIMMOMATIC --in reads_g9_v2.fastq --out clean_g9_v2.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v2.fq --out align_g9_v2.sam --threads 16
+SAMTOOLS SORT --in align_g9_v2.sam --out sorted_g9_v2.bam --threads 16
+SAMTOOLS INDEX --in sorted_g9_v2.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v2.bam --out variants_g9_v2.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v3.fastq --out qc_g9_v3.html
+TRIMMOMATIC --in reads_g9_v3.fastq --out clean_g9_v3.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v3.fq --out align_g9_v3.sam --threads 16
+SAMTOOLS SORT --in align_g9_v3.sam --out sorted_g9_v3.bam --threads 16
+SAMTOOLS INDEX --in sorted_g9_v3.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v3.bam --out variants_g9_v3.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v4.fastq --out qc_g9_v4.html
+TRIMMOMATIC --in reads_g9_v4.fastq --out clean_g9_v4.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v4.fq --out align_g9_v4.sam --threads 16
+SAMTOOLS SORT --in align_g9_v4.sam --out sorted_g9_v4.bam --threads 16
+SAMTOOLS INDEX --in sorted_g9_v4.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v4.bam --out variants_g9_v4.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v5.fastq --out qc_g9_v5.html
+TRIMMOMATIC --in reads_g9_v5.fastq --out clean_g9_v5.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v5.fq --out align_g9_v5.sam --threads 4
+SAMTOOLS SORT --in align_g9_v5.sam --out sorted_g9_v5.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_v5.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v5.bam --out variants_g9_v5.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v6.fastq --out qc_g9_v6.html
+TRIMMOMATIC --in reads_g9_v6.fastq --out clean_g9_v6.fq --minlen 50 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v6.fq --out align_g9_v6.sam --threads 2
+SAMTOOLS SORT --in align_g9_v6.sam --out sorted_g9_v6.bam --threads 2
+SAMTOOLS INDEX --in sorted_g9_v6.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v6.bam --out variants_g9_v6.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v7.fastq --out qc_g9_v7.html
+TRIMMOMATIC --in reads_g9_v7.fastq --out clean_g9_v7.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v7.fq --out align_g9_v7.sam --threads 4
+SAMTOOLS SORT --in align_g9_v7.sam --out sorted_g9_v7.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_v7.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v7.bam --out variants_g9_v7.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v8.fastq --out qc_g9_v8.html
+TRIMMOMATIC --in reads_g9_v8.fastq --out clean_g9_v8.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v8.fq --out align_g9_v8.sam --threads 16
+SAMTOOLS SORT --in align_g9_v8.sam --out sorted_g9_v8.bam --threads 16
+SAMTOOLS INDEX --in sorted_g9_v8.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v8.bam --out variants_g9_v8.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v9.fastq --out qc_g9_v9.html
+TRIMMOMATIC --in reads_g9_v9.fastq --out clean_g9_v9.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v9.fq --out align_g9_v9.sam --threads 4
+SAMTOOLS SORT --in align_g9_v9.sam --out sorted_g9_v9.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_v9.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v9.bam --out variants_g9_v9.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_v10.fastq --out qc_g9_v10.html
+TRIMMOMATIC --in reads_g9_v10.fastq --out clean_g9_v10.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_v10.fq --out align_g9_v10.sam --threads 16
+SAMTOOLS SORT --in align_g9_v10.sam --out sorted_g9_v10.bam --threads 16
+SAMTOOLS INDEX --in sorted_g9_v10.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_v10.bam --out variants_g9_v10.vcf",0,STATIC_VALID,Valid baseline (Somatic Variant Calling: FASTQC -> TRIM -> BWA MEM -> SORT -> INDEX -> GATK Mutect2)
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f1.fastq --out qc_g9_f1.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g9_f1.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f1.fq --out align_g9_f1.sam --threads 4
+SAMTOOLS SORT --in align_g9_f1.sam --out sorted_g9_f1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_f1.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f1.bam --out variants_g9_f1.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_09_SOMATIC_MUTECT2
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f2.fastq --out qc_g9_f2.html
+TRIMMOMATIC --in reads_g9_f2.fastq --out clean_g9_f2.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f2.fq --out align_g9_f2.pdf --threads 8
+SAMTOOLS SORT --in align_g9_f2.sam --out sorted_g9_f2.bam --threads 8
+SAMTOOLS INDEX --in sorted_g9_f2.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f2.bam --out variants_g9_f2.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_09_SOMATIC_MUTECT2
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f3.fastq --out qc_g9_f3.html
+TRIMMOMATIC --in non_existent_intermediate_file.bam --out clean_g9_f3.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f3.fq --out align_g9_f3.sam --threads 4
+SAMTOOLS SORT --in align_g9_f3.sam --out sorted_g9_f3.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_f3.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f3.bam --out variants_g9_f3.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,1,0,5,1,1,1,1.0,1,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f4.fastq --out qc_g9_f4.html
+TRIMMOMATIC --in reads_g9_f4.fastq --out clean_g9_f4.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f4.fq --out align_g9_f4.sam --threads 4
+SAMTOOLS SORT --in align_g9_f4.sam --out sorted_g9_f4.bam --threads 4
+GATK Mutect2 --ref reference.fa --in sorted_g9_f4.bam --out variants_g9_f4.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,1,0,5,1,1,1,1.0,1,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f5.fastq --out qc_g9_f5.html
+TRIMMOMATIC --in reads_g9_f5.fastq --out clean_g9_f5.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f5.fq --out align_g9_f5.sam --threads 2
+SAMTOOLS SORT --in align_g9_f5.sam --out sorted_g9_f5.bam --threads 2
+GATK Mutect2 --ref reference.fa --in sorted_g9_f5.bam --out variants_g9_f5.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_09_SOMATIC_MUTECT2
+1,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f6.fastq --out qc_g9_f6.html
+TRIMMOMATIC --in reads_g9_f6.fastq --out clean_g9_f6.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f6.fq --out align_g9_f6.sam --threads 4
+SAMTOOLS SORT --in align_g9_f6.sam --out sorted_g9_f6.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_f6.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f6.bam --out variants_g9_f6.vcf --threads",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,1,0,5,1,1,1,1.0,1,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f7.fastq --out qc_g9_f7.html
+TRIMMOMATIC --in reads_g9_f7.fastq --out clean_g9_f7.fq --minlen 40 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f7.fq --out align_g9_f7.sam --threads 4
+SAMTOOLS SORT --in align_g9_f7.sam --out sorted_g9_f7.bam --threads 4
+GATK Mutect2 --ref reference.fa --in sorted_g9_f7.bam --out variants_g9_f7.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f8.fastq --out qc_g9_f8.html
+TRIMMOMATIC --in reads_g9_f8.fastq --out clean_g9_f8.fq --minlen 30 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f8.fq --out align_g9_f8.sam --threads -8
+SAMTOOLS SORT --in align_g9_f8.sam --out sorted_g9_f8.bam --threads 8
+SAMTOOLS INDEX --in sorted_g9_f8.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f8.bam --out variants_g9_f8.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,1,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f9.fastq --out qc_g9_f9.html
+TRIMMOMATIC --in reads_g9_f9.fastq --out clean_g9_f9.fq --minlen 40 --slidingwindow invalid_window
+BWA MEM --ref reference.fa --in clean_g9_f9.fq --out align_g9_f9.sam --threads 2
+SAMTOOLS SORT --in align_g9_f9.sam --out sorted_g9_f9.bam --threads 2
+SAMTOOLS INDEX --in sorted_g9_f9.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f9.bam --out variants_g9_f9.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_09_SOMATIC_MUTECT2
+0,0,0,1,1,2,0,6,1,1,1,0.8333,0,GRP_09_SOMATIC_MUTECT2,"FASTQC --in reads_g9_f10.fastq --out qc_g9_f10.html
+TRIMMOMATIC --in reads_g9_f10.fastq --out clean_g9_f10.fq --minlen 36 --slidingwindow 4:20
+BWA MEM --ref reference.fa --in clean_g9_f10.fq --out align_g9_f10.pdf --threads 4
+SAMTOOLS SORT --in align_g9_f10.sam --out sorted_g9_f10.bam --threads 4
+SAMTOOLS INDEX --in sorted_g9_f10.bam
+GATK Mutect2 --ref reference.fa --in sorted_g9_f10.bam --out variants_g9_f10.vcf",1,STATIC_INVALID,Mutated failure (INVALID_EXTENSION) in GRP_09_SOMATIC_MUTECT2
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v1.fq --out align_g10_v1.sam --threads 2
+SAMTOOLS VIEW --in align_g10_v1.sam --out align_g10_v1.bam --threads 2
+SAMTOOLS SORT --in align_g10_v1.bam --out sorted_g10_v1.bam --threads 2
+GATK MarkDuplicates --in sorted_g10_v1.bam --out dedup_g10_v1.bam --metrics dedup_g10_v1.metrics
+SAMTOOLS INDEX --in dedup_g10_v1.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v1.bam --out somatic_g10_v1.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v2.fq --out align_g10_v2.sam --threads 4
+SAMTOOLS VIEW --in align_g10_v2.sam --out align_g10_v2.bam --threads 4
+SAMTOOLS SORT --in align_g10_v2.bam --out sorted_g10_v2.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_v2.bam --out dedup_g10_v2.bam --metrics dedup_g10_v2.metrics
+SAMTOOLS INDEX --in dedup_g10_v2.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v2.bam --out somatic_g10_v2.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v3.fq --out align_g10_v3.sam --threads 16
+SAMTOOLS VIEW --in align_g10_v3.sam --out align_g10_v3.bam --threads 16
+SAMTOOLS SORT --in align_g10_v3.bam --out sorted_g10_v3.bam --threads 16
+GATK MarkDuplicates --in sorted_g10_v3.bam --out dedup_g10_v3.bam --metrics dedup_g10_v3.metrics
+SAMTOOLS INDEX --in dedup_g10_v3.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v3.bam --out somatic_g10_v3.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v4.fq --out align_g10_v4.sam --threads 4
+SAMTOOLS VIEW --in align_g10_v4.sam --out align_g10_v4.bam --threads 4
+SAMTOOLS SORT --in align_g10_v4.bam --out sorted_g10_v4.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_v4.bam --out dedup_g10_v4.bam --metrics dedup_g10_v4.metrics
+SAMTOOLS INDEX --in dedup_g10_v4.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v4.bam --out somatic_g10_v4.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v5.fq --out align_g10_v5.sam --threads 16
+SAMTOOLS VIEW --in align_g10_v5.sam --out align_g10_v5.bam --threads 16
+SAMTOOLS SORT --in align_g10_v5.bam --out sorted_g10_v5.bam --threads 16
+GATK MarkDuplicates --in sorted_g10_v5.bam --out dedup_g10_v5.bam --metrics dedup_g10_v5.metrics
+SAMTOOLS INDEX --in dedup_g10_v5.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v5.bam --out somatic_g10_v5.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v6.fq --out align_g10_v6.sam --threads 8
+SAMTOOLS VIEW --in align_g10_v6.sam --out align_g10_v6.bam --threads 8
+SAMTOOLS SORT --in align_g10_v6.bam --out sorted_g10_v6.bam --threads 8
+GATK MarkDuplicates --in sorted_g10_v6.bam --out dedup_g10_v6.bam --metrics dedup_g10_v6.metrics
+SAMTOOLS INDEX --in dedup_g10_v6.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v6.bam --out somatic_g10_v6.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v7.fq --out align_g10_v7.sam --threads 16
+SAMTOOLS VIEW --in align_g10_v7.sam --out align_g10_v7.bam --threads 16
+SAMTOOLS SORT --in align_g10_v7.bam --out sorted_g10_v7.bam --threads 16
+GATK MarkDuplicates --in sorted_g10_v7.bam --out dedup_g10_v7.bam --metrics dedup_g10_v7.metrics
+SAMTOOLS INDEX --in dedup_g10_v7.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v7.bam --out somatic_g10_v7.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v8.fq --out align_g10_v8.sam --threads 4
+SAMTOOLS VIEW --in align_g10_v8.sam --out align_g10_v8.bam --threads 4
+SAMTOOLS SORT --in align_g10_v8.bam --out sorted_g10_v8.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_v8.bam --out dedup_g10_v8.bam --metrics dedup_g10_v8.metrics
+SAMTOOLS INDEX --in dedup_g10_v8.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v8.bam --out somatic_g10_v8.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v9.fq --out align_g10_v9.sam --threads 16
+SAMTOOLS VIEW --in align_g10_v9.sam --out align_g10_v9.bam --threads 16
+SAMTOOLS SORT --in align_g10_v9.bam --out sorted_g10_v9.bam --threads 16
+GATK MarkDuplicates --in sorted_g10_v9.bam --out dedup_g10_v9.bam --metrics dedup_g10_v9.metrics
+SAMTOOLS INDEX --in dedup_g10_v9.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v9.bam --out somatic_g10_v9.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,0,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_v10.fq --out align_g10_v10.sam --threads 16
+SAMTOOLS VIEW --in align_g10_v10.sam --out align_g10_v10.bam --threads 16
+SAMTOOLS SORT --in align_g10_v10.bam --out sorted_g10_v10.bam --threads 16
+GATK MarkDuplicates --in sorted_g10_v10.bam --out dedup_g10_v10.bam --metrics dedup_g10_v10.metrics
+SAMTOOLS INDEX --in dedup_g10_v10.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_v10.bam --out somatic_g10_v10.vcf",0,STATIC_VALID,Valid baseline (Deduplicated Somatic Calling: BWA MEM -> VIEW -> SORT -> MarkDuplicates -> INDEX -> GATK Mutect2)
+0,0,0,0,0,1,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f1.fq --out align_g10_f1.sam --threads 2
+SAMTOOLS VIEW --in align_g10_f1.sam --out align_g10_f1.bam --threads -2
+SAMTOOLS SORT --in align_g10_f1.bam --out sorted_g10_f1.bam --threads 2
+GATK MarkDuplicates --in sorted_g10_f1.bam --out dedup_g10_f1.bam --metrics dedup_g10_f1.metrics
+SAMTOOLS INDEX --in dedup_g10_f1.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_f1.bam --out somatic_g10_f1.vcf",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_10_DEDUP_SOMATIC
+0,0,0,1,0,1,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f2.fq --out align_g10_f2.sam --threads 4
+SAMTOOLS VIEW --in non_existent_intermediate_file.bam --out align_g10_f2.bam --threads 4
+SAMTOOLS SORT --in align_g10_f2.bam --out sorted_g10_f2.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_f2.bam --out dedup_g10_f2.bam --metrics dedup_g10_f2.metrics
+SAMTOOLS INDEX --in dedup_g10_f2.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_f2.bam --out somatic_g10_f2.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_10_DEDUP_SOMATIC
+0,0,0,0,0,1,1,5,0,1,1,0.6,1,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f3.fq --out align_g10_f3.sam --threads 8
+SAMTOOLS VIEW --in align_g10_f3.sam --out align_g10_f3.bam --threads 8
+SAMTOOLS SORT --in align_g10_f3.bam --out sorted_g10_f3.bam --threads 8
+GATK MarkDuplicates --in sorted_g10_f3.bam --out dedup_g10_f3.bam --metrics dedup_g10_f3.metrics
+GATK Mutect2 --ref reference.fa --in dedup_g10_f3.bam --out somatic_g10_f3.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_10_DEDUP_SOMATIC
+0,0,2,2,0,5,1,6,0,1,1,0.5,1,GRP_10_DEDUP_SOMATIC,"GATK Mutect2 --ref reference.fa --in dedup_g10_f4.bam --out somatic_g10_f4.vcf
+SAMTOOLS VIEW --in align_g10_f4.sam --out align_g10_f4.bam --threads 2
+SAMTOOLS SORT --in align_g10_f4.bam --out sorted_g10_f4.bam --threads 2
+GATK MarkDuplicates --in sorted_g10_f4.bam --out dedup_g10_f4.bam --metrics dedup_g10_f4.metrics
+SAMTOOLS INDEX --in dedup_g10_f4.bam
+BWA MEM --ref reference.fa --in reads_g10_f4.fq --out align_g10_f4.sam --threads 2",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_10_DEDUP_SOMATIC
+0,0,2,2,0,5,1,6,0,1,1,0.5,1,GRP_10_DEDUP_SOMATIC,"GATK Mutect2 --ref reference.fa --in dedup_g10_f5.bam --out somatic_g10_f5.vcf
+SAMTOOLS VIEW --in align_g10_f5.sam --out align_g10_f5.bam --threads 4
+SAMTOOLS SORT --in align_g10_f5.bam --out sorted_g10_f5.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_f5.bam --out dedup_g10_f5.bam --metrics dedup_g10_f5.metrics
+SAMTOOLS INDEX --in dedup_g10_f5.bam
+BWA MEM --ref reference.fa --in reads_g10_f5.fq --out align_g10_f5.sam --threads 4",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_10_DEDUP_SOMATIC
+0,0,2,2,0,5,1,6,0,1,1,0.5,1,GRP_10_DEDUP_SOMATIC,"GATK Mutect2 --ref reference.fa --in dedup_g10_f6.bam --out somatic_g10_f6.vcf
+SAMTOOLS VIEW --in align_g10_f6.sam --out align_g10_f6.bam --threads 4
+SAMTOOLS SORT --in align_g10_f6.bam --out sorted_g10_f6.bam --threads 4
+GATK MarkDuplicates --in sorted_g10_f6.bam --out dedup_g10_f6.bam --metrics dedup_g10_f6.metrics
+SAMTOOLS INDEX --in dedup_g10_f6.bam
+BWA MEM --ref reference.fa --in reads_g10_f6.fq --out align_g10_f6.sam --threads 4",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_10_DEDUP_SOMATIC
+0,0,0,0,0,1,1,5,0,1,1,0.6,1,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f7.fq --out align_g10_f7.sam --threads 8
+SAMTOOLS VIEW --in align_g10_f7.sam --out align_g10_f7.bam --threads 8
+SAMTOOLS SORT --in align_g10_f7.bam --out sorted_g10_f7.bam --threads 8
+GATK MarkDuplicates --in sorted_g10_f7.bam --out dedup_g10_f7.bam --metrics dedup_g10_f7.metrics
+GATK Mutect2 --ref reference.fa --in dedup_g10_f7.bam --out somatic_g10_f7.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_10_DEDUP_SOMATIC
+0,0,0,1,0,1,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f8.fq --out align_g10_f8.sam --threads 2
+SAMTOOLS VIEW --in non_existent_intermediate_file.bam --out align_g10_f8.bam --threads 2
+SAMTOOLS SORT --in align_g10_f8.bam --out sorted_g10_f8.bam --threads 2
+GATK MarkDuplicates --in sorted_g10_f8.bam --out dedup_g10_f8.bam --metrics dedup_g10_f8.metrics
+SAMTOOLS INDEX --in dedup_g10_f8.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_f8.bam --out somatic_g10_f8.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_10_DEDUP_SOMATIC
+0,0,0,2,0,3,1,6,0,1,1,0.5,0,GRP_10_DEDUP_SOMATIC,"BWA MEM --ref reference.fa --in reads_g10_f9.fq --out align_g10_f9.sam --threads 2
+SAMTOOLS VIEW --in align_g10_f9.sam --out align_g10_f9.bam --threads 2
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 2
+GATK MarkDuplicates --in sorted_g10_f9.bam --out dedup_g10_f9.bam --metrics dedup_g10_f9.metrics
+SAMTOOLS INDEX --in dedup_g10_f9.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_f9.bam --out somatic_g10_f9.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_10_DEDUP_SOMATIC
+1,0,1,1,0,3,1,5,0,0,1,0.4,0,GRP_10_DEDUP_SOMATIC,"BOWTIE2 --ref reference.fa --in reads_g10_f10.fq --out align_g10_f10.sam --threads 8
+SAMTOOLS VIEW --in align_g10_f10.sam --out align_g10_f10.bam --threads 8
+SAMTOOLS SORT --in align_g10_f10.bam --out sorted_g10_f10.bam --threads 8
+GATK MarkDuplicates --in sorted_g10_f10.bam --out dedup_g10_f10.bam --metrics dedup_g10_f10.metrics
+SAMTOOLS INDEX --in dedup_g10_f10.bam
+GATK Mutect2 --ref reference.fa --in dedup_g10_f10.bam --out somatic_g10_f10.vcf",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_TOOL) in GRP_10_DEDUP_SOMATIC
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v1.fq --out align_g11_v1.sam --threads 16
+SAMTOOLS VIEW --in align_g11_v1.sam --out align_g11_v1.bam --threads 16
+SAMTOOLS SORT --in align_g11_v1.bam --out sorted_g11_v1.bam --threads 16
+SAMTOOLS INDEX --in sorted_g11_v1.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v2.fq --out align_g11_v2.sam --threads 16
+SAMTOOLS VIEW --in align_g11_v2.sam --out align_g11_v2.bam --threads 16
+SAMTOOLS SORT --in align_g11_v2.bam --out sorted_g11_v2.bam --threads 16
+SAMTOOLS INDEX --in sorted_g11_v2.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v3.fq --out align_g11_v3.sam --threads 2
+SAMTOOLS VIEW --in align_g11_v3.sam --out align_g11_v3.bam --threads 2
+SAMTOOLS SORT --in align_g11_v3.bam --out sorted_g11_v3.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_v3.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v4.fq --out align_g11_v4.sam --threads 16
+SAMTOOLS VIEW --in align_g11_v4.sam --out align_g11_v4.bam --threads 16
+SAMTOOLS SORT --in align_g11_v4.bam --out sorted_g11_v4.bam --threads 16
+SAMTOOLS INDEX --in sorted_g11_v4.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v5.fq --out align_g11_v5.sam --threads 4
+SAMTOOLS VIEW --in align_g11_v5.sam --out align_g11_v5.bam --threads 4
+SAMTOOLS SORT --in align_g11_v5.bam --out sorted_g11_v5.bam --threads 4
+SAMTOOLS INDEX --in sorted_g11_v5.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v6.fq --out align_g11_v6.sam --threads 8
+SAMTOOLS VIEW --in align_g11_v6.sam --out align_g11_v6.bam --threads 8
+SAMTOOLS SORT --in align_g11_v6.bam --out sorted_g11_v6.bam --threads 8
+SAMTOOLS INDEX --in sorted_g11_v6.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v7.fq --out align_g11_v7.sam --threads 16
+SAMTOOLS VIEW --in align_g11_v7.sam --out align_g11_v7.bam --threads 16
+SAMTOOLS SORT --in align_g11_v7.bam --out sorted_g11_v7.bam --threads 16
+SAMTOOLS INDEX --in sorted_g11_v7.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v8.fq --out align_g11_v8.sam --threads 16
+SAMTOOLS VIEW --in align_g11_v8.sam --out align_g11_v8.bam --threads 16
+SAMTOOLS SORT --in align_g11_v8.bam --out sorted_g11_v8.bam --threads 16
+SAMTOOLS INDEX --in sorted_g11_v8.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v9.fq --out align_g11_v9.sam --threads 2
+SAMTOOLS VIEW --in align_g11_v9.sam --out align_g11_v9.bam --threads 2
+SAMTOOLS SORT --in align_g11_v9.bam --out sorted_g11_v9.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_v9.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+0,0,0,0,0,0,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_v10.fq --out align_g11_v10.sam --threads 2
+SAMTOOLS VIEW --in align_g11_v10.sam --out align_g11_v10.bam --threads 2
+SAMTOOLS SORT --in align_g11_v10.bam --out sorted_g11_v10.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_v10.bam",0,STATIC_VALID,Valid baseline (Format Conversion Pipeline: BWA MEM -> SAMTOOLS VIEW -> SAMTOOLS SORT -> SAMTOOLS INDEX)
+1,0,0,1,0,2,0,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA INVALID_SUBCOMMAND --ref reference.fa --in reads_g11_f1.fq --out align_g11_f1.sam --threads 4
+SAMTOOLS VIEW --in align_g11_f1.sam --out align_g11_f1.bam --threads 4
+SAMTOOLS SORT --in align_g11_f1.bam --out sorted_g11_f1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g11_f1.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_11_VIEW_SORT_INDEX
+2,0,0,1,0,3,0,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f2.fq --out align_g11_f2.sam --threads 2 --threads
+SAMTOOLS VIEW --in align_g11_f2.sam --out align_g11_f2.bam --threads 2
+SAMTOOLS SORT --in align_g11_f2.bam --out sorted_g11_f2.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_f2.bam",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_11_VIEW_SORT_INDEX
+2,0,0,1,0,3,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f3.fq --out align_g11_f3.sam --threads 8
+SAMTOOLS VIEW --in align_g11_f3.sam --out align_g11_f3.bam --threads 8 --threads
+SAMTOOLS SORT --in align_g11_f3.bam --out sorted_g11_f3.bam --threads 8
+SAMTOOLS INDEX --in sorted_g11_f3.bam",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_11_VIEW_SORT_INDEX
+1,0,0,1,0,2,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f4.fq --out align_g11_f4.sam --threads 4
+SAMTOOLS INVALID_SUBCOMMAND --in align_g11_f4.sam --out align_g11_f4.bam --threads 4
+SAMTOOLS SORT --in align_g11_f4.bam --out sorted_g11_f4.bam --threads 4
+SAMTOOLS INDEX --in sorted_g11_f4.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_11_VIEW_SORT_INDEX
+0,0,0,0,0,1,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f5.fq --out align_g11_f5.sam --threads 4
+SAMTOOLS VIEW --in align_g11_f5.sam --out align_g11_f5.bam --threads -4
+SAMTOOLS SORT --in align_g11_f5.bam --out sorted_g11_f5.bam --threads 4
+SAMTOOLS INDEX --in sorted_g11_f5.bam",1,STATIC_INVALID,Mutated failure (INVALID_PARAM_FORMAT) in GRP_11_VIEW_SORT_INDEX
+0,0,0,2,0,3,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f6.fq --out align_g11_f6.sam --threads 2
+SAMTOOLS VIEW --in align_g11_f6.sam --out align_g11_f6.bam --threads 2
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_f6.bam",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_11_VIEW_SORT_INDEX
+1,0,0,1,0,2,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f7.fq --out align_g11_f7.sam --threads 8
+SAMTOOLS INVALID_SUBCOMMAND --in align_g11_f7.sam --out align_g11_f7.bam --threads 8
+SAMTOOLS SORT --in align_g11_f7.bam --out sorted_g11_f7.bam --threads 8
+SAMTOOLS INDEX --in sorted_g11_f7.bam",1,STATIC_INVALID,Mutated failure (SYNTAX_UNKNOWN_SUBCOMMAND) in GRP_11_VIEW_SORT_INDEX
+0,0,0,2,0,3,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f8.fq --out align_g11_f8.sam --threads 4
+SAMTOOLS VIEW --in align_g11_f8.sam --out align_g11_f8.bam --threads 4
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 4
+SAMTOOLS INDEX --in sorted_g11_f8.bam",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_11_VIEW_SORT_INDEX
+0,0,0,2,0,3,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"BWA MEM --ref reference.fa --in reads_g11_f9.fq --out align_g11_f9.sam --threads 2
+SAMTOOLS VIEW --in align_g11_f9.sam --out align_g11_f9.bam --threads 2
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 2
+SAMTOOLS INDEX --in sorted_g11_f9.bam",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_11_VIEW_SORT_INDEX
+0,0,1,2,0,3,1,4,0,1,0,0.5,0,GRP_11_VIEW_SORT_INDEX,"SAMTOOLS INDEX --in sorted_g11_f10.bam
+SAMTOOLS VIEW --in align_g11_f10.sam --out align_g11_f10.bam --threads 8
+SAMTOOLS SORT --in align_g11_f10.bam --out sorted_g11_f10.bam --threads 8
+BWA MEM --ref reference.fa --in reads_g11_f10.fq --out align_g11_f10.sam --threads 8",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_11_VIEW_SORT_INDEX
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v1.fastq --out qc_g12_v1.html
+BWA MEM --ref reference.fa --in reads_g12_v1.fastq --out align_g12_v1.sam --threads 4
+SAMTOOLS VIEW --in align_g12_v1.sam --out align_g12_v1.bam --threads 4
+SAMTOOLS SORT --in align_g12_v1.bam --out sorted_g12_v1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g12_v1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v1.bam --out variants_g12_v1.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v2.fastq --out qc_g12_v2.html
+BWA MEM --ref reference.fa --in reads_g12_v2.fastq --out align_g12_v2.sam --threads 4
+SAMTOOLS VIEW --in align_g12_v2.sam --out align_g12_v2.bam --threads 4
+SAMTOOLS SORT --in align_g12_v2.bam --out sorted_g12_v2.bam --threads 4
+SAMTOOLS INDEX --in sorted_g12_v2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v2.bam --out variants_g12_v2.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v3.fastq --out qc_g12_v3.html
+BWA MEM --ref reference.fa --in reads_g12_v3.fastq --out align_g12_v3.sam --threads 8
+SAMTOOLS VIEW --in align_g12_v3.sam --out align_g12_v3.bam --threads 8
+SAMTOOLS SORT --in align_g12_v3.bam --out sorted_g12_v3.bam --threads 8
+SAMTOOLS INDEX --in sorted_g12_v3.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v3.bam --out variants_g12_v3.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v4.fastq --out qc_g12_v4.html
+BWA MEM --ref reference.fa --in reads_g12_v4.fastq --out align_g12_v4.sam --threads 2
+SAMTOOLS VIEW --in align_g12_v4.sam --out align_g12_v4.bam --threads 2
+SAMTOOLS SORT --in align_g12_v4.bam --out sorted_g12_v4.bam --threads 2
+SAMTOOLS INDEX --in sorted_g12_v4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v4.bam --out variants_g12_v4.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v5.fastq --out qc_g12_v5.html
+BWA MEM --ref reference.fa --in reads_g12_v5.fastq --out align_g12_v5.sam --threads 16
+SAMTOOLS VIEW --in align_g12_v5.sam --out align_g12_v5.bam --threads 16
+SAMTOOLS SORT --in align_g12_v5.bam --out sorted_g12_v5.bam --threads 16
+SAMTOOLS INDEX --in sorted_g12_v5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v5.bam --out variants_g12_v5.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v6.fastq --out qc_g12_v6.html
+BWA MEM --ref reference.fa --in reads_g12_v6.fastq --out align_g12_v6.sam --threads 2
+SAMTOOLS VIEW --in align_g12_v6.sam --out align_g12_v6.bam --threads 2
+SAMTOOLS SORT --in align_g12_v6.bam --out sorted_g12_v6.bam --threads 2
+SAMTOOLS INDEX --in sorted_g12_v6.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v6.bam --out variants_g12_v6.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v7.fastq --out qc_g12_v7.html
+BWA MEM --ref reference.fa --in reads_g12_v7.fastq --out align_g12_v7.sam --threads 2
+SAMTOOLS VIEW --in align_g12_v7.sam --out align_g12_v7.bam --threads 2
+SAMTOOLS SORT --in align_g12_v7.bam --out sorted_g12_v7.bam --threads 2
+SAMTOOLS INDEX --in sorted_g12_v7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v7.bam --out variants_g12_v7.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v8.fastq --out qc_g12_v8.html
+BWA MEM --ref reference.fa --in reads_g12_v8.fastq --out align_g12_v8.sam --threads 16
+SAMTOOLS VIEW --in align_g12_v8.sam --out align_g12_v8.bam --threads 16
+SAMTOOLS SORT --in align_g12_v8.bam --out sorted_g12_v8.bam --threads 16
+SAMTOOLS INDEX --in sorted_g12_v8.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v8.bam --out variants_g12_v8.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v9.fastq --out qc_g12_v9.html
+BWA MEM --ref reference.fa --in reads_g12_v9.fastq --out align_g12_v9.sam --threads 16
+SAMTOOLS VIEW --in align_g12_v9.sam --out align_g12_v9.bam --threads 16
+SAMTOOLS SORT --in align_g12_v9.bam --out sorted_g12_v9.bam --threads 16
+SAMTOOLS INDEX --in sorted_g12_v9.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v9.bam --out variants_g12_v9.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,0,0,0,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_v10.fastq --out qc_g12_v10.html
+BWA MEM --ref reference.fa --in reads_g12_v10.fastq --out align_g12_v10.sam --threads 16
+SAMTOOLS VIEW --in align_g12_v10.sam --out align_g12_v10.bam --threads 16
+SAMTOOLS SORT --in align_g12_v10.bam --out sorted_g12_v10.bam --threads 16
+SAMTOOLS INDEX --in sorted_g12_v10.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_v10.bam --out variants_g12_v10.vcf",0,STATIC_VALID,Valid baseline (Full Indexed Reference WGS: BWA INDEX -> FASTQC -> BWA MEM -> VIEW -> SORT -> INDEX -> GATK HaplotypeCaller)
+0,0,0,1,1,2,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in non_existent_intermediate_file.bam --out qc_g12_f1.html
+BWA MEM --ref reference.fa --in reads_g12_f1.fastq --out align_g12_f1.sam --threads 4
+SAMTOOLS VIEW --in align_g12_f1.sam --out align_g12_f1.bam --threads 4
+SAMTOOLS SORT --in align_g12_f1.bam --out sorted_g12_f1.bam --threads 4
+SAMTOOLS INDEX --in sorted_g12_f1.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f1.bam --out variants_g12_f1.vcf",1,STATIC_INVALID,Mutated failure (UNRESOLVED_INTERMEDIATE_FILE) in GRP_12_INDEX_REF_FULL
+0,0,0,3,0,4,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f2.fastq --out qc_g12_f2.html
+BWA MEM --ref reference.fa --in reads_g12_f2.fastq --out align_g12_f2.sam --threads 8
+SAMTOOLS VIEW --in align_g12_f2.sam --out align_g12_f2.bam --threads 8
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 8
+SAMTOOLS INDEX --in sorted_g12_f2.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f2.bam --out variants_g12_f2.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_12_INDEX_REF_FULL
+0,0,0,0,0,1,0,6,1,1,1,0.6667,1,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f3.fastq --out qc_g12_f3.html
+BWA MEM --ref reference.fa --in reads_g12_f3.fastq --out align_g12_f3.sam --threads 8
+SAMTOOLS VIEW --in align_g12_f3.sam --out align_g12_f3.bam --threads 8
+SAMTOOLS SORT --in align_g12_f3.bam --out sorted_g12_f3.bam --threads 8
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f3.bam --out variants_g12_f3.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_12_INDEX_REF_FULL
+0,0,0,3,0,4,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f4.fastq --out qc_g12_f4.html
+BWA MEM --ref reference.fa --in reads_g12_f4.fastq --out align_g12_f4.sam --threads 4
+SAMTOOLS VIEW --in align_g12_f4.sam --out align_g12_f4.bam --threads 4
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 4
+SAMTOOLS INDEX --in sorted_g12_f4.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f4.bam --out variants_g12_f4.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_12_INDEX_REF_FULL
+1,0,0,0,0,1,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f5.fastq --out qc_g12_f5.html
+BWA MEM --ref reference.fa --in reads_g12_f5.fastq --out align_g12_f5.sam --threads 4
+SAMTOOLS VIEW --in align_g12_f5.sam --out align_g12_f5.bam --threads 4
+SAMTOOLS SORT --in align_g12_f5.bam --out sorted_g12_f5.bam --threads 4
+SAMTOOLS INDEX --in sorted_g12_f5.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f5.bam --out variants_g12_f5.vcf --threads",1,STATIC_INVALID,Mutated failure (MISSING_PARAM_VALUE) in GRP_12_INDEX_REF_FULL
+0,0,0,0,0,1,0,6,1,1,1,0.6667,1,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f6.fastq --out qc_g12_f6.html
+BWA MEM --ref reference.fa --in reads_g12_f6.fastq --out align_g12_f6.sam --threads 2
+SAMTOOLS VIEW --in align_g12_f6.sam --out align_g12_f6.bam --threads 2
+SAMTOOLS SORT --in align_g12_f6.bam --out sorted_g12_f6.bam --threads 2
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f6.bam --out variants_g12_f6.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_12_INDEX_REF_FULL
+0,0,0,3,0,4,0,7,1,1,1,0.5714,0,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f7.fastq --out qc_g12_f7.html
+BWA MEM --ref reference.fa --in reads_g12_f7.fastq --out align_g12_f7.sam --threads 2
+SAMTOOLS VIEW --in align_g12_f7.sam --out align_g12_f7.bam --threads 2
+SAMTOOLS SORT --in sample_conflict.bam --out sample_conflict.bam --threads 2
+SAMTOOLS INDEX --in sorted_g12_f7.bam
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f7.bam --out variants_g12_f7.vcf",1,STATIC_INVALID,Mutated failure (CONFLICT_OVERWRITE) in GRP_12_INDEX_REF_FULL
+0,0,2,1,0,4,1,7,1,1,1,0.5714,1,GRP_12_INDEX_REF_FULL,"GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f8.bam --out variants_g12_f8.vcf
+FASTQC --in reads_g12_f8.fastq --out qc_g12_f8.html
+BWA MEM --ref reference.fa --in reads_g12_f8.fastq --out align_g12_f8.sam --threads 8
+SAMTOOLS VIEW --in align_g12_f8.sam --out align_g12_f8.bam --threads 8
+SAMTOOLS SORT --in align_g12_f8.bam --out sorted_g12_f8.bam --threads 8
+SAMTOOLS INDEX --in sorted_g12_f8.bam
+BWA INDEX --ref reference.fa",1,STATIC_INVALID,Mutated failure (INVERT_COMMAND_SEQUENCE) in GRP_12_INDEX_REF_FULL
+0,0,0,0,0,1,0,6,1,1,1,0.6667,1,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f9.fastq --out qc_g12_f9.html
+BWA MEM --ref reference.fa --in reads_g12_f9.fastq --out align_g12_f9.sam --threads 4
+SAMTOOLS VIEW --in align_g12_f9.sam --out align_g12_f9.bam --threads 4
+SAMTOOLS SORT --in align_g12_f9.bam --out sorted_g12_f9.bam --threads 4
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f9.bam --out variants_g12_f9.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_12_INDEX_REF_FULL
+0,0,0,0,0,1,0,6,1,1,1,0.6667,1,GRP_12_INDEX_REF_FULL,"BWA INDEX --ref reference.fa
+FASTQC --in reads_g12_f10.fastq --out qc_g12_f10.html
+BWA MEM --ref reference.fa --in reads_g12_f10.fastq --out align_g12_f10.sam --threads 4
+SAMTOOLS VIEW --in align_g12_f10.sam --out align_g12_f10.bam --threads 4
+SAMTOOLS SORT --in align_g12_f10.bam --out sorted_g12_f10.bam --threads 4
+GATK HaplotypeCaller --ref reference.fa --in sorted_g12_f10.bam --out variants_g12_f10.vcf",1,STATIC_INVALID,Mutated failure (UNINDEXED_BAM_GATK) in GRP_12_INDEX_REF_FULL

@@ -1,0 +1,61 @@
+{
+  "description": "Curated benchmark genomic data processing pipelines for demonstration and validation",
+  "samples": [
+    {
+      "id": "valid_full_wgs_pipeline",
+      "name": "Valid Full WGS Germline Pipeline",
+      "description": "End-to-end standard Whole Genome Sequencing pipeline: QC, trimming, BWA MEM alignment, SAM/BAM conversion, coordinate sorting, BAM indexing, and GATK HaplotypeCaller variant discovery.",
+      "expected_valid": true,
+      "expected_risk": "LOW",
+      "pipeline_text": "FASTQC --in sample_raw.fastq --out qc_report.html\nTRIMMOMATIC --in sample_raw.fastq --out sample_trimmed.fq --minlen 36 --slidingwindow 4:20\nBWA MEM --ref reference.fa --in sample_trimmed.fq --out sample_aligned.sam --threads 8\nSAMTOOLS VIEW --in sample_aligned.sam --out sample_aligned.bam --threads 4\nSAMTOOLS SORT --in sample_aligned.bam --out sample_sorted.bam --threads 4\nSAMTOOLS INDEX --in sample_sorted.bam\nGATK HaplotypeCaller --ref reference.fa --in sample_sorted.bam --out raw_variants.vcf"
+    },
+    {
+      "id": "valid_lightweight_alignment",
+      "name": "Valid Alignment and Indexing Pipeline",
+      "description": "Streamlined alignment and sorting pipeline without variant calling.",
+      "expected_valid": true,
+      "expected_risk": "LOW",
+      "pipeline_text": "FASTQC --in reads.fastq --out qc_report.html\nBWA MEM --ref hg38.fa --in reads.fastq --out aligned.sam\nSAMTOOLS SORT --in aligned.sam --out aligned_sorted.bam\nSAMTOOLS INDEX --in aligned_sorted.bam"
+    },
+    {
+      "id": "invalid_syntax_and_unknown_tool",
+      "name": "Invalid Pipeline: Unknown Command and Malformed Parameters",
+      "description": "Uses unsupported tool BOWTIE2 and invalid integer values for threads.",
+      "expected_valid": false,
+      "expected_risk": "HIGH",
+      "pipeline_text": "BOWTIE2 --in sample.fastq --out aligned.sam\nTRIMMOMATIC --in sample.fastq --out sample_trimmed.fq --slidingwindow invalid_format --threads -2\nSAMTOOLS VIEW --in aligned.sam --out aligned.bam"
+    },
+    {
+      "id": "invalid_missing_parameters",
+      "name": "Invalid Pipeline: Omitted Mandatory Parameters",
+      "description": "BWA MEM called without --ref or --out, and GATK called without --ref.",
+      "expected_valid": false,
+      "expected_risk": "HIGH",
+      "pipeline_text": "FASTQC --in raw_sample.fastq\nBWA MEM --in raw_sample.fastq\nSAMTOOLS SORT --in sample.bam\nGATK HaplotypeCaller --in sample.bam --out variants.vcf"
+    },
+    {
+      "id": "invalid_command_sequence",
+      "name": "Invalid Pipeline: Inverted Workflow Sequence",
+      "description": "Attempts variant calling before alignment, and read trimming after variant calling.",
+      "expected_valid": false,
+      "expected_risk": "HIGH",
+      "pipeline_text": "GATK HaplotypeCaller --ref ref.fa --in sample_sorted.bam --out variants.vcf\nBWA MEM --ref ref.fa --in sample.fq --out sample.sam\nTRIMMOMATIC --in sample.fq --out sample_trimmed.fq --minlen 36"
+    },
+    {
+      "id": "invalid_unresolved_references",
+      "name": "Invalid Pipeline: Undefined Input Files and In-Place Overwrite",
+      "description": "References non-existent intermediate files and overwrites input with output file.",
+      "expected_valid": false,
+      "expected_risk": "HIGH",
+      "pipeline_text": "SAMTOOLS VIEW --in non_existent_reads.sam --out converted.bam\nSAMTOOLS SORT --in converted.bam --out converted.bam\nGATK HaplotypeCaller --ref ref.fa --in missing_final.bam --out variants.vcf"
+    },
+    {
+      "id": "invalid_unindexed_bam_for_gatk",
+      "name": "Invalid Pipeline: Unindexed BAM Input for GATK",
+      "description": "Attempts GATK HaplotypeCaller without indexing the BAM with SAMTOOLS INDEX first.",
+      "expected_valid": false,
+      "expected_risk": "HIGH",
+      "pipeline_text": "FASTQC --in reads.fastq --out qc.html\nBWA MEM --ref ref.fa --in reads.fastq --out reads.sam\nSAMTOOLS SORT --in reads.sam --out reads_sorted.bam\nGATK HaplotypeCaller --ref ref.fa --in reads_sorted.bam --out out.vcf"
+    }
+  ]
+}
